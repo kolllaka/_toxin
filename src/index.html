@@ -21,9 +21,71 @@
 			</div>
 			<div class="container">
 				<div class="mainpage__content">
-					<div class="mainpage__order">
-						@@include('./html/_order.html')
-					</div>
+					<form action="./catalog.html" class="mainpage__order card">
+						<div class="card__title">
+							<span>Найдём номера под ваши пожелания</span>
+						</div>
+						<div class="card__body">
+							<div class="card__row">
+								<label for="" class="card__item">
+									<div class="card__name">прибытие</div>
+									<div type="text" class="card__input">
+										<input type="text">
+									</div>
+								</label>
+								<label for="" class="card__item">
+									<div class="card__name">выезд</div>
+									<div type="text" class="card__input">
+										<input type="text">
+									</div>
+								</label>
+							</div>
+							<div class="card__row">
+								<div class="card__item select">
+									<label class="select__title">
+										<div class="card__name">гости</div>
+										<div type="text" class="card__input" placeholder="Сколько гостей"><span>Сколько
+												гостей</span>
+										</div>
+									</label>
+									<div class="select__body">
+										<div class="select__option">
+											<div class="select__name">взрослые</div>
+											<div class="select__quantity quantity">
+												<div class="quantity__btn quantity__minus"></div>
+												<div class="quantity__value">0</div>
+												<div class="quantity__btn quantity__plus"></div>
+											</div>
+										</div>
+										<div class="select__option">
+											<div class="select__name">дети</div>
+											<div class="select__quantity quantity">
+												<div class="quantity__btn quantity__minus"></div>
+												<div class="quantity__value">0</div>
+												<div class="quantity__btn quantity__plus"></div>
+											</div>
+										</div>
+										<div class="select__option">
+											<div class="select__name">младенцы</div>
+											<div class="select__quantity quantity">
+												<div class="quantity__btn quantity__minus"></div>
+												<div class="quantity__value">0</div>
+												<div class="quantity__btn quantity__plus"></div>
+											</div>
+										</div>
+										<div class="select__buttons">
+											<div class="select__btn clear">очистить</div>
+											<div class="select__btn done">применить</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card__row">
+							<button type="submit" class="card__btn btn btn__main"><span>подобрать
+									номер</span></button>
+						</div>
+					</form>
 					<div class="mainpage__tagline">
 						Лучшие номера для вашей работы, отдыха и просто вдохновения
 					</div>

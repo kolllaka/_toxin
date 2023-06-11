@@ -18,7 +18,7 @@
 }
 
 [class^="_icon-"],
-[class*=" _icon-"] {
+[class*="_icon-"] {
 	&:before {
 		@extend %ic;
 		display: block;

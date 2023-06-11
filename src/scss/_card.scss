@@ -1,0 +1,154 @@
+.card {
+	padding: 40px 30px 30px;
+	border: 1px solid #0000001F;
+	border-radius: 4px;
+	// .card__title
+	&__title {
+		margin-bottom: 21px;
+	}
+
+	// .card__body
+	&__body {
+		margin-bottom: 30px;
+	}
+
+	// .card__row
+	&__row {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 20px;
+		&:not(:last-child){
+			margin-bottom: 20px;
+		}
+	}
+
+	// .card__item
+	&__item {
+		width: 100%;
+	}
+
+	// .card__name
+	&__name {
+		margin-bottom: 5px;
+	}
+
+	// .card__input
+	&__input {
+		border: 1px solid black;
+		input{
+			width: 100%;
+		}
+	}
+
+	// .card__btn
+	&__btn {
+		width: 100%;
+		span{
+			padding: 15px 20px;
+		}
+	}
+	
+	// .card__item
+	&__item {
+	}
+
+	// .card__name
+	&__name {
+	}
+
+	// .card__input
+	&__input {
+		padding: 13px 15px;
+	}
+}
+
+.select {
+	position: relative;
+	// .select__title
+	&__title{
+		cursor: pointer;
+	}
+
+	// .select__body
+	&__body {
+		display: none;
+		padding: 13px;
+		background-color: $white;
+		border: 1px solid #1F204180;
+		border-radius: 0 0 4px 4px;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		&.show{
+			display: block;
+		}
+	}
+
+	// .select__option
+	&__option {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 10px;
+		&:not(:first-child){
+			margin-top: 22px;
+		}
+	}
+
+	// .select__name
+	&__name {
+	}
+
+	// .select__quantity
+	&__quantity {
+	}
+
+	// .select__buttons
+	&__buttons {
+		margin-top: 29px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	// .select__btn
+	&__btn {
+		cursor: pointer;
+	}
+}
+.quantity {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1px;
+	// .quantity__btn
+	&__btn {
+		flex: 0 0 30px;
+		cursor: pointer;
+		height: 30px;
+		width: 30px;
+		border: 1px solid rgba(31, 32, 65, 0.5);
+		border-radius: 50%;
+	}
+
+	// .quantity__minus
+	&__minus {
+		background: url("../img/icons/minus.svg") center no-repeat;
+	}
+
+	// .quantity__value
+	&__value {
+		height: 30px;
+		padding: 0 6px;
+		width: 100%;
+		display: flex;
+		align-items: center;
+	}
+
+	// .quantity__plus
+	&__plus {
+		background: url("../img/icons/plus.svg") center no-repeat;
+	}
+}
