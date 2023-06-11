@@ -319,11 +319,17 @@ body.locked {
   text-align: end;
 }
 
-.footer {
+.footer__top {
   padding: 104px 0 100px;
+  -webkit-box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
+          box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
 }
 
-.footer__top {
+.footer__top .footer__text {
+  max-width: 260px;
+}
+
+.footer__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -337,10 +343,6 @@ body.locked {
   margin-bottom: 20px;
 }
 
-.footer__text {
-  max-width: 260px;
-}
-
 .footer__nav li:not(:last-child) {
   margin-bottom: 20px;
 }
@@ -348,6 +350,10 @@ body.locked {
 .footer__linktitle {
   text-transform: uppercase;
   margin-bottom: 21px;
+}
+
+.footer__bottom {
+  padding: 26px 0;
 }
 
 @media (max-width: 1339.98px) {
