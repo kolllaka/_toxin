@@ -52,4 +52,23 @@
 	&__bottom {
 		padding: 26px 0;
 	}
+
+	// .footer__social
+	&__social {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+	}
+
+	// .footer__sociallink
+	&__sociallink {
+		font-size: 19.5px;
+		&::before {
+			color: #8ba4f9;
+			background: linear-gradient(180deg, $pirple 0%, $blue 100%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+	}
 }
+
