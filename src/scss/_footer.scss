@@ -1,0 +1,51 @@
+.footer {
+	padding: 104px 0 100px;
+	// .footer__content
+	&__content {
+	}
+
+	// .footer__top
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		gap: 20px;
+	}
+
+	// .footer__column
+	&__column {
+	}
+
+	// .footer__logo
+	&__logo {
+		margin-bottom: 20px;
+	}
+
+	// .footer__text
+	&__text {
+		max-width: 260px;
+	}
+
+	// .footer__nav
+	&__nav {
+		li{
+			&:not(:last-child){
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	// .footer__linktitle
+	&__linktitle {
+		text-transform: uppercase;
+		margin-bottom: 21px;
+	}
+
+	// .footer__link
+	&__link {
+
+	}
+
+	// .footer__bottom
+	&__bottom {
+	}
+}

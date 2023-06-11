@@ -1,0 +1,45 @@
+.mainpage {
+	position: relative;
+	min-height: 100vh;
+
+	// .mainpage__bg
+	&__bg {
+		img{
+			z-index: -1;
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100vh;
+			width: 100vw;
+			object-fit: cover;
+		}
+	}
+
+	// .mainpage__content
+	&__content {
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	// .mainpage__order
+	&__order {
+		align-self: start;
+		margin-top: 70px+70px;
+		width: 380px;
+		background-color: $white;
+		// ! убрать
+		height: 500px;
+	}
+
+	// .mainpage__tagline
+	&__tagline {
+		align-self: end;
+		margin-bottom: 18px;
+		margin-right:-5px;
+		width: 300px;
+		text-align: end;
+	}
+}
+

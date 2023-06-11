@@ -1,0 +1,148 @@
+.header {
+	padding: 22px 0;
+	// .header__navbar
+	&__navbar {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 34.5px;
+	}
+	// .header__menu
+	&__menu {
+		flex: 1 0 auto;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	// .header__logo
+	&__logo {
+		flex-shrink: 0;
+		flex-grow: 0;
+	}
+	// .header__links
+	&__links {
+		
+	}
+	// .header__buttons
+	&__buttons {
+	}
+}
+.linksheader {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 30px;
+	// .linksheader__item
+	&__item {
+		padding: 20px 15px;
+	}
+	// .linksheader__link
+	&__link {
+		span{
+			font-weight: 500;
+			font-size: 16px;
+			line-height: calc(20 / 16 * 100%);
+			text-transform: uppercase;
+			color: $header;
+		}
+		&-ref{
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			&::after{
+				content: '';
+				display: block;
+				height: 24px;
+				width: 24px;
+				flex-shrink: 0;
+				flex-grow: 0;
+				background: url('../img/icons/ref.svg') center no-repeat;
+			}
+		}
+	}
+}
+
+// Burger
+.burger {
+	// .burger__header
+	&__header {
+	}
+	// .burger__menu
+	&__menu {
+	}
+	// .burger__btn
+	&__btn {
+		display: none;
+	}
+}
+
+@media (max-width:$burgerBreakpoint) {
+	.burger {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		// .burger__header
+		&__header {
+			z-index: 2;
+		}
+		// .burger__menu
+		&__menu {
+			display: none;
+			&.active{
+				background: gray;
+				position: fixed;
+				left: 0;
+				top: 0;
+				height: 100vh;
+				width: 100vw;
+				z-index: 1;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				pointer-events: all;
+				animation: fade 0.1s linear;
+			}
+		}
+		// .burger__btn
+		&__btn {
+			z-index: 2;
+			display: block;
+			position: relative;
+			width: 30px;
+			height: 18px;
+			cursor: pointer;
+			z-index: 5;
+			span {
+				transition: all 0.3s ease 0s;
+				top: calc(50% - 1px);
+				left: 0;
+				position: absolute;
+				width: 100%;
+				height: 2px;
+				background-color: #000;
+				&:first-child {
+					top: 0;
+				}
+				&:last-child {
+					top: auto;
+					bottom: 0;
+				}
+			}
+			&.active-burger {
+				span {
+					transform: scale(0);
+					&:first-child {
+						transform: rotate(-45deg);
+						top: calc(50% - 1px);
+					}
+					&:last-child {
+						transform: rotate(45deg);
+						bottom: calc(50% - 1px);
+					}
+				}
+			}
+		}
+	}
+}
+

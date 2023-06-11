@@ -1,0 +1,12 @@
+// Global SCSS imports
+@import './vars';
+@import './reset';
+@import './global';
+
+// Sectioms SCSS files imports
+@import './header';
+@import './index';
+@import './footer';
+
+// Libs
+// @import './libs/swiper';
