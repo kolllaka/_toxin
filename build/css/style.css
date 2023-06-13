@@ -367,10 +367,11 @@ a:active {
 }
 
 .mainpage__tagline {
+  position: relative;
+  right: -5px;
+  bottom: 18px;
   -ms-flex-item-align: end;
       align-self: end;
-  margin-bottom: 18px;
-  margin-right: -5px;
   width: 300px;
   text-align: end;
 }

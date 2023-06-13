@@ -33,9 +33,10 @@
 
 	// .mainpage__tagline
 	&__tagline {
+		position: relative;
+		right: -5px;
+		bottom: 18px;
 		align-self: end;
-		margin-bottom: 18px;
-		margin-right:-5px;
 		width: 300px;
 		text-align: end;
 	}
