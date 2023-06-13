@@ -473,11 +473,11 @@ a:active {
 }
 
 .select__option:not(:first-child) {
-  margin-top: 22px;
+  margin-top: 7px;
 }
 
 .select__buttons {
-  margin-top: 29px;
+  margin-top: 19px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

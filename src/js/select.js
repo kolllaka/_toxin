@@ -9,26 +9,20 @@ class MyCustomSelect {
 	}
 
 	#render() {
-		this.data.options.forEach((option) => {
-			if (this.mapPlaceholder.has(option.placeholdername)) {
-				this.mapPlaceholder.set(option.placeholdername, { value: this.mapPlaceholder.get(option.placeholdername).value + option.value, tails: option.tails })
-			} else {
-				this.mapPlaceholder.set(option.placeholdername, { value: +option.value, tails: option.tails })
-			}
-		});
-		console.log("map", this.mapPlaceholder);
-
+		this.#fillMap()
 		this.$el.innerHTML = selectTemplate(this.data)
 	}
 
 	#setup() {
 		this.$el.addEventListener('click', (e) => {
+			// show options
 			if (e.target.closest('.select__title')) {
 				this.$el.querySelector('.select__body').classList.toggle('show')
 
 				return
 			}
 
+			// add or subtract count of the option
 			if (e.target.classList.contains('quantity__btn')) {
 				const quantity = e.target.closest('.quantity'),
 					index = quantity.dataset.index,
@@ -61,6 +55,19 @@ class MyCustomSelect {
 					this.$el.querySelector('.card__input').innerHTML = `${this.#getSelectPlaceholder()}`
 				}
 			}
+
+			// done 
+			if (e.target.closest('.done')) {
+				this.$el.querySelector('.select__body').classList.remove('show')
+			}
+
+			// clear 
+			if (e.target.closest('.clear')) {
+				this.data.options.forEach((option) => {
+					option.value = 0
+				})
+				this.#update()
+			}
 		})
 	}
 
@@ -83,7 +90,24 @@ class MyCustomSelect {
 		return selectPlaceholder.join(', ')
 	}
 
-	#update() { }
+	#fillMap() {
+		this.data.options.forEach((option) => {
+			if (this.mapPlaceholder.has(option.placeholdername)) {
+				this.mapPlaceholder.set(option.placeholdername, { value: this.mapPlaceholder.get(option.placeholdername).value + option.value, tails: option.tails })
+			} else {
+				this.mapPlaceholder.set(option.placeholdername, { value: +option.value, tails: option.tails })
+			}
+		});
+	}
+
+	#update() {
+		this.$el.querySelectorAll('.quantity').forEach((quantity, index) => {
+			quantity.querySelector('.quantity__value').innerHTML = `${this.data.options[index].value}`
+		})
+		this.mapPlaceholder.clear()
+		this.#fillMap()
+		this.$el.querySelector('.card__input').innerHTML = `${this.#getSelectPlaceholder()}`
+	}
 }
 
 const selectTemplate = (data) => {
@@ -125,31 +149,3 @@ const termOfNum = (number, tails) => {
 	cases = [2, 0, 1, 1, 1, 2];
 	return tails[(number % 100 > 4 && number % 100 < 20) ? 2 : cases[(number % 10 < 5) ? number % 10 : 5]];
 }
-
-const select = new MyCustomSelect(".select", {
-	title: "гости",
-	placeholder: "Сколько гостей",
-	options: [
-		{
-			name: "взрослыe",
-			value: 0,
-			maxvalue: 7,
-			placeholdername: "гость",
-			tails: ["гость", "гостя", "гостей"]
-		},
-		{
-			name: "дети",
-			value: 0,
-			maxvalue: 7,
-			placeholdername: "гость",
-			tails: ["гость", "гостя", "гостей"]
-		},
-		{
-			name: "младенцы",
-			value: 0,
-			maxvalue: 7,
-			placeholdername: "младенец",
-			tails: ["младенец", "младенца", "младенцев"]
-		}
-	]
-})

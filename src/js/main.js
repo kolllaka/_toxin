@@ -48,111 +48,33 @@ window.addEventListener('scroll', fixedNav)
 
 
 // Select
-// const selects = document.querySelectorAll('.select')
-// let selectMap = new Map();
-// if (selects) {
-// 	selects.forEach((select, index) => {
-// 		const quantityValues = select.querySelectorAll('options')
-// 		let data = new Map();
-// 		quantityValues.forEach((quantityValue) => {
-// 			data.set(quantityValue.dataset.name, parseInt(quantityValue.dataset.value))
-// 		})
-
-// 		selectMap.set(index, data)
-// 	})
-// }
-
-// console.log("selectMap:", selectMap);
-// if (selects) {
-// 	selects.forEach((select, index) => {
-// 		select.addEventListener('click', (e) => {
-// 			if (e.target.closest('.select__title')) {
-// 				select.querySelector('.select__body').classList.toggle('show')
-
-// 				return
-// 			}
-
-// 			if (e.target.classList.contains('quantity__btn')) {
-// 				const quantityOption = e.target.closest('options')
-// 				let quantityValueView = quantityOption.querySelector('.quantity__value')
-// 				let quantityValue = parseInt(quantityOption.dataset.value)
-// 				let quantityName = quantityOption.dataset.name
-// 				let selectInput = select.querySelector('.card__input')
-// 				let data = selectMap.get(index)
-
-// 				if (e.target.classList.contains('quantity__minus')) {
-// 					if (quantityValue > 0) {
-// 						quantityValue--
-
-// 						quantityValueView.innerText = quantityValue
-// 						quantityOption.dataset.value = quantityValue
-// 						data.set(quantityName, quantityValue)
-// 						selectMap.set(index, data)
-// 						selectInput.innerText = getSelectTitle(data)
-// 					}
-
-// 					return
-// 				}
-
-// 				if (e.target.classList.contains('quantity__plus')) {
-// 					if (quantityValue < 7) {
-// 						quantityValue++
-
-// 						quantityValueView.innerText = quantityValue
-// 						quantityOption.dataset.value = quantityValue
-// 						data.set(quantityName, quantityValue)
-// 						selectMap.set(index, data)
-// 						selectInput.innerText = getSelectTitle(data)
-// 					}
-
-
-// 					return
-// 				}
-// 			}
-// 		})
-// 	})
-// }
-// const termList = new Map([
-// 	["гость", ["гость", "гостя", "гостей"]],
-// 	["младенец", ["младенец", "младенца", "младенцев"]],
-// 	["спальня", ["спальня", "спальни", "спален"]],
-// 	["кровать", ["кровать", "кровати", "кроватей"]],
-// 	["ванная комната", ["ванная комната", "ванные комнаты", "ванных комнат"]],
-// ]);
-// function termOfNum(number, word) {
-// 	if (termList.has(word)) {
-// 		let titles = termList.get(word);
-
-// 		cases = [2, 0, 1, 1, 1, 2];
-// 		return titles[(number % 100 > 4 && number % 100 < 20) ? 2 : cases[(number % 10 < 5) ? number % 10 : 5]];
-// 	} else {
-// 		return word;
-// 	}
-// }
-
-// const getSelectTitle = (data) => {
-// 	let strMap = new Map()
-// 	console.log("data", data);
-
-
-// 	for (let name of data.keys()) {
-// 		if (name == 'взрослый' || name == 'ребёнок') {
-// 			console.log(name);
-// 			if (strMap.has('гость')) {
-// 				strMap.set('гость', strMap.get('гость') + data.get(name))
-// 			} else {
-// 				console.log(+data.get(name));
-// 				strMap.set('гость', +data.get(name))
-// 			}
-// 			continue
-// 		}
-
-// 		strMap.set(name, data.get(name))
-// 	}
-// 	console.log("map", strMap);
-
-// 	return strMap
-// }
+const select = new MyCustomSelect(".select", {
+	title: "гости",
+	placeholder: "Сколько гостей",
+	options: [
+		{
+			name: "взрослыe",
+			value: 0,
+			maxvalue: 7,
+			placeholdername: "гость",
+			tails: ["гость", "гостя", "гостей"]
+		},
+		{
+			name: "дети",
+			value: 0,
+			maxvalue: 7,
+			placeholdername: "гость",
+			tails: ["гость", "гостя", "гостей"]
+		},
+		{
+			name: "младенцы",
+			value: 0,
+			maxvalue: 7,
+			placeholdername: "младенец",
+			tails: ["младенец", "младенца", "младенцев"]
+		}
+	]
+})
 
 // Swiper
 // BildSlider
