@@ -336,21 +336,21 @@ const select = new MyCustomSelect(".select", {
 	placeholder: "Сколько гостей",
 	options: [
 		{
-			name: "взрослый",
+			name: "взрослыe",
 			value: 0,
 			maxvalue: 7,
 			placeholdername: "гость",
 			tails: ["гость", "гостя", "гостей"]
 		},
 		{
-			name: "ребёнок",
+			name: "дети",
 			value: 0,
 			maxvalue: 7,
 			placeholdername: "гость",
 			tails: ["гость", "гостя", "гостей"]
 		},
 		{
-			name: "младенец",
+			name: "младенцы",
 			value: 0,
 			maxvalue: 7,
 			placeholdername: "младенец",
