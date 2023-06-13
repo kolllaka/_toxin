@@ -49,19 +49,111 @@ window.addEventListener('scroll', fixedNav)
 
 
 // Select
-const selects = document.querySelectorAll('.select')
-if (selects) {
-	selects.forEach((select) => {
-		select.addEventListener('click', (e) => {
-			if (e.target.closest('.select__title')) {
-				select.querySelector('.select__body').classList.toggle('show')
+// const selects = document.querySelectorAll('.select')
+// let selectMap = new Map();
+// if (selects) {
+// 	selects.forEach((select, index) => {
+// 		const quantityValues = select.querySelectorAll('options')
+// 		let data = new Map();
+// 		quantityValues.forEach((quantityValue) => {
+// 			data.set(quantityValue.dataset.name, parseInt(quantityValue.dataset.value))
+// 		})
 
-				return
-			}
-		})
-	})
-}
+// 		selectMap.set(index, data)
+// 	})
+// }
 
+// console.log("selectMap:", selectMap);
+// if (selects) {
+// 	selects.forEach((select, index) => {
+// 		select.addEventListener('click', (e) => {
+// 			if (e.target.closest('.select__title')) {
+// 				select.querySelector('.select__body').classList.toggle('show')
+
+// 				return
+// 			}
+
+// 			if (e.target.classList.contains('quantity__btn')) {
+// 				const quantityOption = e.target.closest('options')
+// 				let quantityValueView = quantityOption.querySelector('.quantity__value')
+// 				let quantityValue = parseInt(quantityOption.dataset.value)
+// 				let quantityName = quantityOption.dataset.name
+// 				let selectInput = select.querySelector('.card__input')
+// 				let data = selectMap.get(index)
+
+// 				if (e.target.classList.contains('quantity__minus')) {
+// 					if (quantityValue > 0) {
+// 						quantityValue--
+
+// 						quantityValueView.innerText = quantityValue
+// 						quantityOption.dataset.value = quantityValue
+// 						data.set(quantityName, quantityValue)
+// 						selectMap.set(index, data)
+// 						selectInput.innerText = getSelectTitle(data)
+// 					}
+
+// 					return
+// 				}
+
+// 				if (e.target.classList.contains('quantity__plus')) {
+// 					if (quantityValue < 7) {
+// 						quantityValue++
+
+// 						quantityValueView.innerText = quantityValue
+// 						quantityOption.dataset.value = quantityValue
+// 						data.set(quantityName, quantityValue)
+// 						selectMap.set(index, data)
+// 						selectInput.innerText = getSelectTitle(data)
+// 					}
+
+
+// 					return
+// 				}
+// 			}
+// 		})
+// 	})
+// }
+// const termList = new Map([
+// 	["гость", ["гость", "гостя", "гостей"]],
+// 	["младенец", ["младенец", "младенца", "младенцев"]],
+// 	["спальня", ["спальня", "спальни", "спален"]],
+// 	["кровать", ["кровать", "кровати", "кроватей"]],
+// 	["ванная комната", ["ванная комната", "ванные комнаты", "ванных комнат"]],
+// ]);
+// function termOfNum(number, word) {
+// 	if (termList.has(word)) {
+// 		let titles = termList.get(word);
+
+// 		cases = [2, 0, 1, 1, 1, 2];
+// 		return titles[(number % 100 > 4 && number % 100 < 20) ? 2 : cases[(number % 10 < 5) ? number % 10 : 5]];
+// 	} else {
+// 		return word;
+// 	}
+// }
+
+// const getSelectTitle = (data) => {
+// 	let strMap = new Map()
+// 	console.log("data", data);
+
+
+// 	for (let name of data.keys()) {
+// 		if (name == 'взрослый' || name == 'ребёнок') {
+// 			console.log(name);
+// 			if (strMap.has('гость')) {
+// 				strMap.set('гость', strMap.get('гость') + data.get(name))
+// 			} else {
+// 				console.log(+data.get(name));
+// 				strMap.set('гость', +data.get(name))
+// 			}
+// 			continue
+// 		}
+
+// 		strMap.set(name, data.get(name))
+// 	}
+// 	console.log("map", strMap);
+
+// 	return strMap
+// }
 
 // Swiper
 // BildSlider
@@ -110,3 +202,159 @@ if (document.querySelector('.slider')) {
 		});
 	}
 }
+
+class MyCustomSelect {
+	constructor($selector, data) {
+		this.$el = document.querySelector($selector)
+		this.data = data
+		this.mapPlaceholder = new Map()
+
+		this.#render()
+		this.#setup()
+	}
+
+	#render() {
+		this.data.options.forEach((option) => {
+			if (this.mapPlaceholder.has(option.placeholdername)) {
+				this.mapPlaceholder.set(option.placeholdername, { value: this.mapPlaceholder.get(option.placeholdername).value + option.value, tails: option.tails })
+			} else {
+				this.mapPlaceholder.set(option.placeholdername, { value: +option.value, tails: option.tails })
+			}
+		});
+		console.log("map", this.mapPlaceholder);
+
+		this.$el.innerHTML = selectTemplate(this.data)
+	}
+
+	#setup() {
+		this.$el.addEventListener('click', (e) => {
+			if (e.target.closest('.select__title')) {
+				this.$el.querySelector('.select__body').classList.toggle('show')
+
+				return
+			}
+
+			if (e.target.classList.contains('quantity__btn')) {
+				const quantity = e.target.closest('.quantity'),
+					index = quantity.dataset.index,
+					option = this.data.options[index]
+
+				let isChange = false,
+					mapData
+
+				if (e.target.classList.contains('quantity__minus')) {
+					if (option.value > 0) {
+						mapData = this.mapPlaceholder.get(option.placeholdername)
+						this.data.options[index].value--
+						mapData.value--
+						isChange = true
+					}
+				}
+
+				if (e.target.classList.contains('quantity__plus')) {
+					if (this.data.options[index].value < this.data.options[index].maxvalue) {
+						mapData = this.mapPlaceholder.get(option.placeholdername)
+						this.data.options[index].value++
+						mapData.value++
+						isChange = true
+					}
+				}
+
+				if (isChange) {
+					quantity.querySelector('.quantity__value').innerHTML = `${this.data.options[index].value}`
+					this.mapPlaceholder.set(option.placeholdername, mapData)
+					this.$el.querySelector('.card__input').innerHTML = `${this.#getSelectPlaceholder()}`
+				}
+			}
+		})
+	}
+
+	#getSelectPlaceholder() {
+		let selectPlaceholder = []
+		for (let key of this.mapPlaceholder.keys()) {
+			if (this.mapPlaceholder.get(key).value > 0) {
+				let value = this.mapPlaceholder.get(key).value
+				let tail = termOfNum(this.mapPlaceholder.get(key).value, this.mapPlaceholder.get(key).tails)
+				selectPlaceholder.push(`${value} ${tail}`)
+
+				continue
+			}
+		}
+
+		if (selectPlaceholder.length == 0) {
+			return this.data.placeholder
+		}
+
+		return selectPlaceholder.join(', ')
+	}
+
+	#update() { }
+}
+
+const selectTemplate = (data) => {
+	return `
+	<label class="select__title">
+		<div class="card__name">${data.title}</div>
+		<div type="text" class="card__input">
+			<span>${data.placeholder}</span >
+		</div >
+	</label >
+	<div class="select__body">
+
+		${optionsTemplate(data.options)}
+
+		<div class="select__buttons">
+			<div class="select__btn clear">очистить</div>
+			<div class="select__btn done">применить</div>
+		</div>
+	</div>
+`
+}
+
+const optionsTemplate = (options = []) => {
+	return options.map((option, index) => {
+		return `
+		<div class="select__option">
+			<div class="select__name">${option.name}</div>
+			<div class="select__quantity quantity" data-index=${index}>
+				<div class="quantity__btn quantity__minus"></div>
+				<div class="quantity__value">${option.value}</div>
+				<div class="quantity__btn quantity__plus"></div>
+			</div>
+		</div>
+		`
+	}).join('')
+}
+
+const termOfNum = (number, tails) => {
+	cases = [2, 0, 1, 1, 1, 2];
+	return tails[(number % 100 > 4 && number % 100 < 20) ? 2 : cases[(number % 10 < 5) ? number % 10 : 5]];
+}
+
+const select = new MyCustomSelect(".select", {
+	title: "гости",
+	placeholder: "Сколько гостей",
+	options: [
+		{
+			name: "взрослый",
+			value: 0,
+			maxvalue: 7,
+			placeholdername: "гость",
+			tails: ["гость", "гостя", "гостей"]
+		},
+		{
+			name: "ребёнок",
+			value: 0,
+			maxvalue: 7,
+			placeholdername: "гость",
+			tails: ["гость", "гостя", "гостей"]
+		},
+		{
+			name: "младенец",
+			value: 0,
+			maxvalue: 7,
+			placeholdername: "младенец",
+			tails: ["младенец", "младенца", "младенцев"]
+		}
+	]
+})
