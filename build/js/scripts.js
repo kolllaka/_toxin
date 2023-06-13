@@ -19,6 +19,7 @@ class MyCustomSelect {
 			// show options
 			if (e.target.closest('.select__title')) {
 				this.$el.querySelector('.select__body').classList.toggle('show')
+				this.$el.querySelector('.card__input').classList.toggle('show')
 
 				return
 			}
@@ -60,6 +61,7 @@ class MyCustomSelect {
 			// done 
 			if (e.target.closest('.done')) {
 				this.$el.querySelector('.select__body').classList.remove('show')
+				this.$el.querySelector('.card__input').classList.remove('show')
 			}
 
 			// clear 

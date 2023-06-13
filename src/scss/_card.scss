@@ -35,9 +35,14 @@
 
 	// .card__input
 	&__input {
-		border: 1px solid black;
+		border: 1px solid rgba($colorText, 0.5);
+		border-radius: 4px;
 		input{
 			width: 100%;
+		}
+		&.show{
+			border-radius: 4px 4px 0 0;
+			border-bottom: 1px solid transparent;
 		}
 	}
 
@@ -75,7 +80,7 @@
 		display: none;
 		padding: 13px;
 		background-color: $white;
-		border: 1px solid #1F204180;
+		border: 1px solid rgba($colorText, 0.5);
 		border-radius: 0 0 4px 4px;
 		position: absolute;
 		top: 100%;
@@ -130,7 +135,7 @@
 		cursor: pointer;
 		height: 30px;
 		width: 30px;
-		border: 1px solid rgba(31, 32, 65, 0.5);
+		border: 1px solid rgba($colorText, 0.25);
 		border-radius: 50%;
 	}
 

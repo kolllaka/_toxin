@@ -416,11 +416,17 @@ a:active {
 }
 
 .card__input {
-  border: 1px solid black;
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  border-radius: 4px;
 }
 
 .card__input input {
   width: 100%;
+}
+
+.card__input.show {
+  border-radius: 4px 4px 0 0;
+  border-bottom: 1px solid transparent;
 }
 
 .card__btn {
@@ -447,7 +453,7 @@ a:active {
   display: none;
   padding: 13px;
   background-color: #FFFFFF;
-  border: 1px solid rgba(31, 32, 65, 0.5019607843);
+  border: 1px solid rgba(31, 32, 65, 0.5);
   border-radius: 0 0 4px 4px;
   position: absolute;
   top: 100%;
@@ -514,7 +520,7 @@ a:active {
   cursor: pointer;
   height: 30px;
   width: 30px;
-  border: 1px solid rgba(31, 32, 65, 0.5);
+  border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 50%;
 }
 
