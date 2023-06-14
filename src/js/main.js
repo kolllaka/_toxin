@@ -76,6 +76,12 @@ const select = new MyCustomSelect(".select", {
 	]
 })
 
+// Calendar
+const calendar = new Calendar('.calendar', {
+	placeholder: 'ДД.ММ.ГГГГ',
+	class: '.card__input'
+})
+
 // Swiper
 // BildSlider
 let sliders = document.querySelectorAll('._swiper');

@@ -1,0 +1,192 @@
+.calendar{
+	position: relative;
+}
+
+.datapicker {
+	position: absolute;
+	top:  100%;
+	left: 50%;
+	transform: translateX(-50%);
+
+
+	flex-direction: column;
+	padding: 15px;
+	border: 1px solid rgba($colorText, 0.5);
+	border-radius: 0 0 4px 4px;
+	display: none;
+	&.show{
+		display: flex;
+	}
+
+	// .datapicker__header
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 20px;
+		width: 100%;
+	}
+	
+	// .datapicker__body
+	&__body {
+		margin-bottom: 20px;
+	}
+
+	// .datapicker__footer
+	&__footer{
+		width: 100%;
+	}
+
+	// .datapicker__btns
+	&__btns {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	// .datapicker__prev
+	&__prev {
+	}
+
+	// .datapicker__title
+	&__title {
+		font-size: 25px;
+		font-weight: bold;
+	}
+
+	// .datapicker__next
+	&__next {
+	}
+
+	// .datapicker__btn
+	&__btn {
+		text-transform: uppercase;
+		text-decoration: none;
+		padding: 2px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: $pirple;
+		cursor: pointer;
+		&:hover{
+			opacity: 0.8;
+		}
+		&:active{
+			opacity: 0.5;
+		}
+	}
+}
+
+.gridbody {
+
+	// .gridbody__row
+	&__row {
+		display: grid;
+		row-gap: 4px;
+		grid-template-columns: $cellWidth $cellWidth $cellWidth $cellWidth $cellWidth $cellWidth $cellWidth;
+	}
+
+	// .gridbody__cell
+	&__cell {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 10px;
+	}
+
+	// .gridbody__cell
+	&__cell {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 10px;
+		aspect-ratio: 1 / 1;
+	}
+
+	// .gridbody__cellname
+	&__cellname{
+		color: $pirple;
+	}
+
+		// .gridbody__day
+		&__day{
+			color: black;
+			cursor: pointer;
+			&:hover{
+				opacity: 0.8;
+			}
+			&:active{
+				opacity: 0.5;
+			}
+			&-select{
+				position: relative;
+				z-index: 10;
+				background: linear-gradient(180deg, $pirple 0%, $blue 100%);
+				border-radius: 50%;
+				color: white;
+			}
+			&-selectleft{
+				position: relative;
+				&::before{
+					content: "";
+					top: 0;
+					bottom: 0;
+					left: 50%;
+					right: 0;
+					background: linear-gradient(180deg, $pirple 0%, $blue 100%);
+					z-index: -1;
+					position: absolute;
+					opacity: 0.5;
+				}
+			}
+			&-selectright{
+				position: relative;
+				&::after{
+					content: "";
+					top: 0;
+					bottom: 0;
+					right: 50%;
+					left: 0;
+					background: linear-gradient(180deg, $pirple 0%, $blue 100%);
+					z-index: -1;
+					position: absolute;
+					opacity: 0.5;
+				}
+			}
+			&-hover{
+				position: relative;
+				z-index: 10;
+				&::after,
+				&::before{
+					content: "";
+					top: 0;
+					bottom: 0;
+					background: linear-gradient(180deg, $pirple 0%, $blue 100%);
+					z-index: -1;
+					position: absolute;
+					opacity: 0.5;
+				}
+				&::after{
+					left: 0;
+					right: 50%;
+				}
+				&::before{
+					left: 50%;
+					right: 0;
+				}
+			}
+		}
+
+	// .gridbody__next
+	// .gridbody__prev
+	&__prev,
+	&__next {
+		color: rgba($colorText, 0.5);
+	}
+	&__prev{
+		cursor: url('../img/icons/arrow-left.png'), auto;
+	}
+	&__next{
+		cursor: url('../img/icons/arrow-right.png'), auto;
+	}
+}

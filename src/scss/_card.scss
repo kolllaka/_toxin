@@ -23,6 +23,18 @@
 		}
 	}
 
+	// .card__inputs
+	&__inputs {
+		display: flex;
+		justify-content: space-between;
+		gap: 20px;
+		width: 100%;
+		&.show .card__input{
+			border-radius: 4px 4px 0 0;
+			border-bottom: 1px solid transparent;
+		}
+	}
+
 	// .card__item
 	&__item {
 		width: 100%;
@@ -35,11 +47,10 @@
 
 	// .card__input
 	&__input {
+		cursor: pointer;
 		border: 1px solid rgba($colorText, 0.5);
 		border-radius: 4px;
-		input{
-			width: 100%;
-		}
+		padding: 13px 15px;
 		&.show{
 			border-radius: 4px 4px 0 0;
 			border-bottom: 1px solid transparent;
@@ -53,18 +64,12 @@
 			padding: 15px 20px;
 		}
 	}
-	
-	// .card__item
-	&__item {
-	}
 
-	// .card__name
-	&__name {
-	}
-
-	// .card__input
-	&__input {
-		padding: 13px 15px;
+	// .card__datapicker
+	&__datapicker {
+		background-color: $white;
+		width: 100%;
+		z-index: 10;
 	}
 }
 
