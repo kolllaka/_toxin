@@ -48,6 +48,10 @@
 
 	}
 
+	// .footer__form
+	&__form {
+	}
+
 	// .footer__bottom
 	&__bottom {
 		padding: 26px 0;
@@ -72,3 +76,25 @@
 	}
 }
 
+.footerform {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border: 1px solid rgba($color: $colorText, $alpha: .25);
+	padding: 12px 15px;
+	border-radius: 4px;
+
+	// .footerform__input
+	&__input {
+		width: 100%;
+	}
+
+	// .footerform__btn
+	&__btn {
+		cursor: pointer;
+		height: 20px;
+		flex: 0 0 20px;
+		// ! delete
+		background-color: $blue;
+	}
+}

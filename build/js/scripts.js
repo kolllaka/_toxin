@@ -135,7 +135,7 @@ class Calendar {
 		if (event.target.closest('.gridbody__day')) {
 			if (this.selectedValue[1]) {
 				this.selectedValue = []
-				calendar.#update()
+				this.#update()
 				this.#markingDay()
 
 				return
