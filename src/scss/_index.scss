@@ -44,17 +44,14 @@
 	}
 }
 
-
 // ------------------- media --------------------------------
 @media (max-width: $breakpoint768) {
-	
 	.mainpage__order{
 		align-self: center;
 	}
 }
 
 @media (max-width: $breakpoint480) {
-	
 	.mainpage__order{
 		width: 300px;
 		margin-top: 70px+20px;

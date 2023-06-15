@@ -237,12 +237,45 @@ body.locked {
   opacity: 0.5;
 }
 
-a:hover {
+a:hover,
+button:hover {
   opacity: 0.8;
 }
 
-a:active {
+a:active,
+button:active {
   opacity: 0.5;
+}
+
+.arrow {
+  position: relative;
+}
+
+.arrow::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 0;
+  bottom: 0;
+  padding: 22px 22px;
+  background: url("../img/icons/arrow_forward.svg") center no-repeat;
+}
+
+.arrow_gr::after {
+  background: url("../img/icons/arrow_forwardgr.svg") center no-repeat;
+}
+
+.arrow_d::after {
+  background: url("../img/icons/arrow_d.svg") center no-repeat;
+}
+
+.arrow.show::after {
+  -webkit-transform: rotate(180deg) translateY(50%);
+      -ms-transform: rotate(180deg) translateY(50%);
+          transform: rotate(180deg) translateY(50%);
 }
 
 .header {
@@ -439,9 +472,43 @@ a:active {
           align-items: center;
 }
 
+.datapicker__prev {
+  position: relative;
+}
+
+.datapicker__prev::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%) rotate(180deg);
+      -ms-transform: translateY(-50%) rotate(180deg);
+          transform: translateY(-50%) rotate(180deg);
+  left: 0;
+  bottom: 0;
+  padding: 22px 22px;
+  background: url("../img/icons/arrow_forwardgr.svg") center no-repeat;
+}
+
 .datapicker__title {
   font-size: 25px;
   font-weight: bold;
+}
+
+.datapicker__next {
+  position: relative;
+}
+
+.datapicker__next::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 0;
+  bottom: 0;
+  padding: 22px 22px;
+  background: url("../img/icons/arrow_forwardgr.svg") center no-repeat;
 }
 
 .datapicker__btn {
@@ -648,11 +715,6 @@ a:active {
   width: 100%;
 }
 
-.card__inputs.show .card__input {
-  border-radius: 4px 4px 0 0;
-  border-bottom: 1px solid transparent;
-}
-
 .card__item {
   width: 100%;
 }
@@ -662,6 +724,7 @@ a:active {
 }
 
 .card__input {
+  z-index: 10;
   cursor: pointer;
   border: 1px solid rgba(31, 32, 65, 0.5);
   border-radius: 4px;
@@ -682,9 +745,9 @@ a:active {
 }
 
 .card__datapicker {
+  z-index: 15;
   background-color: #FFFFFF;
   width: 100%;
-  z-index: 10;
 }
 
 .select {
@@ -696,6 +759,7 @@ a:active {
 }
 
 .select__body {
+  z-index: 5;
   display: none;
   padding: 13px;
   background-color: #FFFFFF;
@@ -871,7 +935,7 @@ a:active {
       -ms-flex-align: center;
           align-items: center;
   border: 1px solid rgba(31, 32, 65, 0.25);
-  padding: 12px 15px;
+  padding: 12px 0 12px 15px;
   border-radius: 4px;
   gap: 15px;
 }
@@ -883,10 +947,6 @@ a:active {
 .footerform__btn {
   cursor: pointer;
   height: 20px;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 20px;
-          flex: 0 0 20px;
-  background-color: #8ba4f9;
 }
 
 @media (max-width: 1339.98px) {

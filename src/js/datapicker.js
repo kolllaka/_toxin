@@ -174,7 +174,7 @@ class Calendar {
 		// submit button on Datapicker
 		if (event.target.closest('.datapicker__submit')) {
 			event.preventDefault()
-			this.$el.querySelector('.card__inputs').classList.remove('show')
+			this.$el.querySelectorAll('.card__input').forEach((cardinput) => cardinput.classList.remove('show'))
 			this.$el.querySelector('.datapicker').classList.remove('show')
 
 			return
@@ -182,7 +182,7 @@ class Calendar {
 
 		// show Datapicker
 		if (event.target.closest('.card__input')) {
-			this.$el.querySelector('.card__inputs').classList.toggle('show')
+			this.$el.querySelectorAll('.card__input').forEach((cardinput) => cardinput.classList.toggle('show'))
 			this.$el.querySelector('.datapicker').classList.toggle('show')
 		}
 	}
@@ -323,7 +323,6 @@ const calenderTemplate = () => {
 	<div class="datapicker__header">
 		<div class="datapicker__btns">
 			<a href="#" class="datapicker__btn datapicker__prev">
-				&#60;--
 			</a>
 		</div>
 		<div class="datapicker__title">
@@ -331,7 +330,6 @@ const calenderTemplate = () => {
 		</div>
 		<div class="datapicker__btns">
 			<a href="#" class="datapicker__btn datapicker__next">
-				--&#62;
 			</a>
 		</div>
 	</div>

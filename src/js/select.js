@@ -116,7 +116,7 @@ const selectTemplate = (data) => {
 	return `
 	<label class="select__title">
 		<div class="card__name">${data.title}</div>
-		<div type="text" class="card__input">
+		<div type="text" class="card__input arrow arrow_d">
 			<span>${data.placeholder}</span >
 		</div >
 	</label >

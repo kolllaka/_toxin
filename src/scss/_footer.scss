@@ -87,7 +87,7 @@
 	justify-content: space-between;
 	align-items: center;
 	border: 1px solid rgba($color: $colorText, $alpha: .25);
-	padding: 12px 15px;
+	padding: 12px 0 12px 15px;
 	border-radius: 4px;
 	gap: 15px;
 
@@ -100,16 +100,11 @@
 	&__btn {
 		cursor: pointer;
 		height: 20px;
-		flex: 0 0 20px;
-		// ! delete
-		background-color: $blue;
 	}
 }
 
-
 // ------------------- media --------------------------------
 @media (max-width:$breakpoint992) {
-	
 	.footer {
 		&__top {
 			display: none;
@@ -136,7 +131,6 @@
 }
 
 @media (max-width: $breakpoint480) {
-	
 	.footer {
 		&__bottom {
 			padding: 60px 0;

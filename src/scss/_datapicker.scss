@@ -46,6 +46,17 @@
 
 	// .datapicker__prev
 	&__prev {
+		position: relative;
+		&::after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%) rotate(180deg);
+			left: 0;
+			bottom: 0;
+			padding: 22px 22px;
+			background: url("../img/icons/arrow_forwardgr.svg") center no-repeat;
+		}
 	}
 
 	// .datapicker__title
@@ -56,6 +67,17 @@
 
 	// .datapicker__next
 	&__next {
+		position: relative;
+		&::after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			right: 0;
+			bottom: 0;
+			padding: 22px 22px;
+			background: url("../img/icons/arrow_forwardgr.svg") center no-repeat;
+		}
 	}
 
 	// .datapicker__btn
@@ -78,7 +100,6 @@
 }
 
 .gridbody {
-
 	// .gridbody__row
 	&__row {
 		display: grid;

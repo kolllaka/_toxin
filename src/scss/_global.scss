@@ -111,12 +111,45 @@ body {
 	}
 }
 
-a{
+a,
+button{
 	&:hover{
 		opacity: 0.8;
 	}
 
 	&:active{
 		opacity: 0.5;
+	}
+}
+
+.arrow {
+	position: relative;
+	&::after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 0;
+		bottom: 0;
+		padding: 22px 22px;
+		background: url("../img/icons/arrow_forward.svg") center no-repeat;
+	}
+
+	&_gr {
+		&::after {
+			background: url("../img/icons/arrow_forwardgr.svg") center no-repeat;
+		}
+	}
+
+	&_d {
+		&::after {
+			background: url("../img/icons/arrow_d.svg") center no-repeat;
+		}
+	}
+
+	&.show{
+		&::after{
+			transform: rotate(180deg) translateY(50%);
+		}
 	}
 }
