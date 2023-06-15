@@ -25,6 +25,7 @@
 
 	// .mainpage__order
 	&__order {
+		z-index: 3;
 		align-self: start;
 		margin-top: 70px+70px;
 		width: 380px;
@@ -33,6 +34,7 @@
 
 	// .mainpage__tagline
 	&__tagline {
+		z-index: 2;
 		position: relative;
 		right: -5px;
 		bottom: 18px;
@@ -42,3 +44,19 @@
 	}
 }
 
+
+// ------------------- media --------------------------------
+@media (max-width: $breakpoint768) {
+	
+	.mainpage__order{
+		align-self: center;
+	}
+}
+
+@media (max-width: $breakpoint480) {
+	
+	.mainpage__order{
+		width: 300px;
+		margin-top: 70px+20px;
+	}
+}

@@ -163,3 +163,11 @@
 		background: url("../img/icons/plus.svg") center no-repeat;
 	}
 }
+
+// ------------------- media --------------------------------
+@media (max-width: $breakpoint480) {
+	
+	.card{
+		padding: 20px 10px;
+	}
+}

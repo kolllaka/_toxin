@@ -55,6 +55,12 @@
 	// .footer__bottom
 	&__bottom {
 		padding: 26px 0;
+		& .footer__column:first-child {
+			display: none;
+		}
+		& .footer__content{
+			align-items: center;
+		}
 	}
 
 	// .footer__social
@@ -83,6 +89,7 @@
 	border: 1px solid rgba($color: $colorText, $alpha: .25);
 	padding: 12px 15px;
 	border-radius: 4px;
+	gap: 15px;
 
 	// .footerform__input
 	&__input {
@@ -96,5 +103,43 @@
 		flex: 0 0 20px;
 		// ! delete
 		background-color: $blue;
+	}
+}
+
+
+// ------------------- media --------------------------------
+@media (max-width:$breakpoint992) {
+	
+	.footer {
+		&__top {
+			display: none;
+		}
+		&__bottom {
+			padding: 100px 0;
+			& .footer__column:first-child {
+				display: block;
+			}
+		}
+
+		&__content{
+			flex-direction: column;
+			gap: 25px;
+		}
+		&__logo{
+			margin-bottom: -5px;
+		}
+
+		&__text{
+			text-align: center;
+		}
+	}
+}
+
+@media (max-width: $breakpoint480) {
+	
+	.footer {
+		&__bottom {
+			padding: 60px 0;
+		}
 	}
 }
