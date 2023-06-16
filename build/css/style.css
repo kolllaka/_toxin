@@ -542,12 +542,12 @@ button:active {
   display: none;
 }
 
-.mainpage {
+.page {
   position: relative;
   min-height: 100vh;
 }
 
-.mainpage__bg img {
+.page__bg img {
   z-index: -1;
   position: absolute;
   top: 0;
@@ -558,7 +558,7 @@ button:active {
      object-fit: cover;
 }
 
-.mainpage__content {
+.page__content {
   min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -572,13 +572,13 @@ button:active {
           justify-content: space-between;
 }
 
-.mainpage__content-c {
+.page__content-c {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-.mainpage__order {
+.page__order {
   z-index: 3;
   -ms-flex-item-align: start;
       align-self: start;
@@ -587,7 +587,7 @@ button:active {
   background-color: #FFFFFF;
 }
 
-.mainpage__login {
+.page__login {
   z-index: 3;
   -ms-flex-item-align: center;
       align-self: center;
@@ -596,7 +596,7 @@ button:active {
   background-color: #FFFFFF;
 }
 
-.mainpage__tagline {
+.page__tagline {
   z-index: 2;
   position: relative;
   right: -5px;

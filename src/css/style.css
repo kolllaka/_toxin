@@ -494,11 +494,11 @@ button:active {
     bottom: calc(50% - 1px);
   }
 }
-.mainpage {
+.page {
   position: relative;
   min-height: 100vh;
 }
-.mainpage__bg img {
+.page__bg img {
   z-index: -1;
   position: absolute;
   top: 0;
@@ -508,30 +508,30 @@ button:active {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.mainpage__content {
+.page__content {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.mainpage__content-c {
+.page__content-c {
   justify-content: center;
 }
-.mainpage__order {
+.page__order {
   z-index: 3;
   align-self: start;
   margin-top: 140px;
   width: 380px;
   background-color: #FFFFFF;
 }
-.mainpage__login {
+.page__login {
   z-index: 3;
   align-self: center;
   margin-top: 70px;
   width: 380px;
   background-color: #FFFFFF;
 }
-.mainpage__tagline {
+.page__tagline {
   z-index: 2;
   position: relative;
   right: -5px;

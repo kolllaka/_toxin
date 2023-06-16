@@ -1,8 +1,8 @@
-.mainpage {
+.page {
 	position: relative;
 	min-height: 100vh;
 
-	// .mainpage__bg
+	// .page__bg
 	&__bg {
 		img{
 			z-index: -1;
@@ -15,7 +15,7 @@
 		}
 	}
 
-	// .mainpage__content
+	// .page__content
 	&__content {
 		min-height: 100vh;
 		display: flex;
@@ -26,7 +26,7 @@
 		}
 	}
 
-	// .mainpage__order
+	// .page__order
 	&__order {
 		z-index: 3;
 		align-self: start;
@@ -35,7 +35,7 @@
 		background-color: $white;
 	}
 
-	// .mainpage__login
+	// .page__login
 	&__login{
 		z-index: 3;
 		align-self: center;
@@ -44,7 +44,7 @@
 		background-color: $white;
 	}
 
-	// .mainpage__tagline
+	// .page__tagline
 	&__tagline {
 		z-index: 2;
 		position: relative;
