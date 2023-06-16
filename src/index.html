@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Главная</title>
-	<link rel="stylesheet" href="./css/style.min.css">
+	<link rel="stylesheet" href="./css/indexstyles.min.css">
 </head>
 
 <body>
@@ -15,12 +15,12 @@
 		@@include('./html/_header.html')
 
 		<!-- Main Page -->
-		<main class="page">
+		<div class="page">
 			<div class="page__bg">
 				<img src="./img/index/bg.jpg" alt="">
 			</div>
 			<div class="container">
-				<div class="page__content">
+				<main class="page__content">
 					<form action="./catalog.html" class="page__order card">
 						<div class="card__title">
 							<span>Найдём номера под ваши пожелания</span>
@@ -55,9 +55,9 @@
 					<div class="page__tagline">
 						Лучшие номера для вашей работы, отдыха и просто вдохновения
 					</div>
-				</div>
+				</main>
 			</div>
-		</main>
+		</div>
 
 		<!-- Footer -->
 		@@include('./html/_footer.html')
@@ -66,6 +66,6 @@
 		<!-- @@include('./html/_modal.html') -->
 	</div>
 </body>
-<script src="./js/scripts.min.js"></script>
+<script src="./js/index.min.js"></script>
 
 </html>
