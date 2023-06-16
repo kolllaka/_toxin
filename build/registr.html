@@ -5,8 +5,8 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Главная</title>
 	<link rel="stylesheet" href="./css/style.min.css">
+	<title>регистрация</title>
 </head>
 
 <body>
@@ -49,24 +49,37 @@
 		<!-- Main Page -->
 		<main class="mainpage">
 			<div class="mainpage__bg">
-				<img src="./img/index/bg.jpg" alt="">
+				<img src="./img/login/bg.jpg" alt="">
 			</div>
 			<div class="container">
-				<div class="mainpage__content">
-					<form action="./catalog.html" class="mainpage__order card">
+				<div class="mainpage__content mainpage__content-c">
+					<form action="./index.html" class="mainpage__login card">
 						<div class="card__title">
-							<span>Найдём номера под ваши пожелания</span>
+							<span>Войти</span>
 						</div>
 						<div class="card__body">
-							<!-- calendar -->
+							<div class="card__row">
+								<div class="card__inputs">
+									<div class="card__item">
+										<input class="card__input" placeholder="Имя">
+										<input class="card__input" placeholder="Фамилия">
+										<div class="card__radio radio">
+											<label class="radio__label">
+												<input type="radio" name="gender" class="radio__input">
+												<span>Мужчина</span>
+											</label>
+											<label class="radio__label">
+												<input type="radio" name="gender" class="radio__input">
+												<span>Женщина</span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
 							<div class="card__row calendar">
 								<div class="card__inputs">
 									<label class="card__item">
-										<div class="card__name">Прибытие</div>
-										<div class="card__input arrow arrow_d">ДД.ММ.ГГГГ</div>
-									</label>
-									<label class="card__item">
-										<div class="card__name">Отъезд</div>
+										<div class="card__name">Дата рождения</div>
 										<div class="card__input arrow arrow_d">ДД.ММ.ГГГГ</div>
 									</label>
 								</div>
@@ -74,19 +87,36 @@
 
 								</div>
 							</div>
-							<!-- select -->
 							<div class="card__row">
-								<div class="card__item select"></div>
+								<div class="card__inputs">
+									<label class="card__item">
+										<div class="card__name">данные для входа в сервис</div>
+										<input class="card__input" placeholder="Email">
+										<input class="card__input" placeholder="Пароль" type="password">
+										<div class="card__radio checkbox">
+											<label class="checkbox__label">
+												<input type="checkbox" name="gender" class="checkbox__input">
+												<span>Получать спецпредложения</span>
+											</label>
+										</div>
+									</label>
+								</div>
 							</div>
 						</div>
 						<div class="card__row">
-							<button type="submit" class="card__btn btn btn__main arrow"><span>подобрать
-									номер</span></button>
+							<button type="submit" class="card__btn btn btn__main arrow"><span>войти</span></button>
+						</div>
+						<div class="card__row">
+							<div class="card__inputs">
+								<label class="card__item">
+									<span style="white-space: nowrap;">Уже есть аккаунт на Toxin</span>
+								</label>
+								<label class="card__item">
+									<a href="./login.html" class="card__btn-secondary btn btn__secondary"><span>Войти</span></a>
+								</label>
+							</div>
 						</div>
 					</form>
-					<div class="mainpage__tagline">
-						Лучшие номера для вашей работы, отдыха и просто вдохновения
-					</div>
 				</div>
 			</div>
 		</main>
@@ -175,9 +205,6 @@
 		</div>
 	</div>
 </footer>
-
-		<!-- Modal -->
-		
 	</div>
 </body>
 <script src="./js/scripts.min.js"></script>

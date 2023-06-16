@@ -237,6 +237,7 @@ button:active {
 }
 
 .arrow {
+  cursor: pointer;
   position: relative;
 }
 .arrow::after {
@@ -259,6 +260,16 @@ button:active {
   transform: rotate(180deg) translateY(50%);
 }
 
+.radio {
+  display: flex;
+  gap: 20px;
+  justify-content: start;
+}
+.checkbox {
+  display: flex;
+  gap: 10px;
+  justify-content: start;
+}
 .header {
   z-index: 100;
   position: absolute;
@@ -407,10 +418,20 @@ button:active {
   flex-direction: column;
   justify-content: space-between;
 }
+.mainpage__content-c {
+  justify-content: center;
+}
 .mainpage__order {
   z-index: 3;
   align-self: start;
   margin-top: 140px;
+  width: 380px;
+  background-color: #FFFFFF;
+}
+.mainpage__login {
+  z-index: 3;
+  align-self: center;
+  margin-top: 70px;
   width: 380px;
   background-color: #FFFFFF;
 }
@@ -638,6 +659,7 @@ button:active {
 .card__inputs {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 20px;
   width: 100%;
 }
@@ -645,24 +667,40 @@ button:active {
   width: 100%;
 }
 .card__name {
+  text-transform: uppercase;
   margin-bottom: 5px;
 }
 .card__input {
   z-index: 10;
-  cursor: pointer;
   border: 1px solid rgba(31, 32, 65, 0.5);
   border-radius: 4px;
   padding: 13px 15px;
+  width: 100%;
 }
 .card__input.show {
   border-radius: 4px 4px 0 0;
   border-bottom: 1px solid transparent;
+}
+.card__input:not(:last-child) {
+  margin-bottom: 10px;
+}
+.card__radio {
+  width: 100%;
+}
+.card__radio:not(:last-child) {
+  margin-bottom: 10px;
 }
 .card__btn {
   width: 100%;
 }
 .card__btn span {
   padding: 15px 20px;
+}
+.card__btn-secondary {
+  width: 100%;
+}
+.card__btn-secondary span {
+  padding: 13px 18px;
 }
 .card__datapicker {
   z-index: 15;

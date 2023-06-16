@@ -48,39 +48,43 @@ window.addEventListener('scroll', fixedNav)
 
 
 // Select
-const select = new MyCustomSelect(".select", {
-	title: "гости",
-	placeholder: "Сколько гостей",
-	options: [
-		{
-			name: "взрослыe",
-			value: 0,
-			maxvalue: 7,
-			placeholdername: "гость",
-			tails: ["гость", "гостя", "гостей"]
-		},
-		{
-			name: "дети",
-			value: 0,
-			maxvalue: 7,
-			placeholdername: "гость",
-			tails: ["гость", "гостя", "гостей"]
-		},
-		{
-			name: "младенцы",
-			value: 0,
-			maxvalue: 7,
-			placeholdername: "младенец",
-			tails: ["младенец", "младенца", "младенцев"]
-		}
-	]
-})
+if (document.querySelector('.select')) {
+	const select = new MyCustomSelect(".select", {
+		title: "гости",
+		placeholder: "Сколько гостей",
+		options: [
+			{
+				name: "взрослыe",
+				value: 0,
+				maxvalue: 7,
+				placeholdername: "гость",
+				tails: ["гость", "гостя", "гостей"]
+			},
+			{
+				name: "дети",
+				value: 0,
+				maxvalue: 7,
+				placeholdername: "гость",
+				tails: ["гость", "гостя", "гостей"]
+			},
+			{
+				name: "младенцы",
+				value: 0,
+				maxvalue: 7,
+				placeholdername: "младенец",
+				tails: ["младенец", "младенца", "младенцев"]
+			}
+		]
+	})
+}
 
 // Calendar
-const calendar = new Calendar('.calendar', {
-	placeholder: 'ДД.ММ.ГГГГ',
-	class: '.card__input'
-})
+if (document.querySelector('.calendar')) {
+	const calendar = new Calendar('.calendar', {
+		placeholder: 'ДД.ММ.ГГГГ',
+		class: '.card__input'
+	})
+}
 
 // Swiper
 // BildSlider

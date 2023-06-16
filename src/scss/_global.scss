@@ -123,6 +123,7 @@ button{
 }
 
 .arrow {
+	cursor: pointer;
 	position: relative;
 	&::after {
 		content: "";
@@ -151,5 +152,31 @@ button{
 		&::after{
 			transform: rotate(180deg) translateY(50%);
 		}
+	}
+}
+
+.radio {
+	display: flex;
+	gap: 20px;
+	justify-content: start;
+	// .radio__label
+	&__label {
+	}
+
+	// .radio__input
+	&__input {
+	}
+}
+
+.checkbox {
+	display: flex;
+	gap: 10px;
+	justify-content: start;
+	// .checkbox__label
+	&__label {
+	}
+
+	// .checkbox__input
+	&__input {
 	}
 }

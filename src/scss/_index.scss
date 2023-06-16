@@ -21,6 +21,9 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+		&-c{
+			justify-content: center;
+		}
 	}
 
 	// .mainpage__order
@@ -28,6 +31,15 @@
 		z-index: 3;
 		align-self: start;
 		margin-top: 70px+70px;
+		width: 380px;
+		background-color: $white;
+	}
+
+	// .mainpage__login
+	&__login{
+		z-index: 3;
+		align-self: center;
+		margin-top: 70px;
 		width: 380px;
 		background-color: $white;
 	}
