@@ -1,0 +1,41 @@
+.page {
+
+	// .page__content
+	&__content {
+		min-height: 100vh;
+		display: grid;
+		grid-template-columns: 266px auto;
+		gap: 60px;
+		margin-top: 70px+30px;
+	}
+
+	// .page__aside
+	&__aside {
+	}
+
+	// .page__maincontent
+	&__maincontent {
+	}
+}
+
+.asidepage {
+
+	// .asidepage__row
+	&__row {
+	}
+}
+
+.maincontent {
+
+	// .maincontent__title
+	&__title {
+	}
+
+	// .maincontent__body
+	&__body {
+	}
+
+	// .maincontent__nav
+	&__nav {
+	}
+}

@@ -47,11 +47,11 @@ function fixedNav() {
 window.addEventListener('scroll', fixedNav)
 
 
-// Select
-if (document.querySelector('.select')) {
-	const select = new MyCustomSelect(".select", {
-		title: "гости",
+// Select guests
+if (document.getElementById('guests')) {
+	const select = new MyCustomSelect("guests", {
 		placeholder: "Сколько гостей",
+		class: '.card__input',
 		options: [
 			{
 				name: "взрослыe",
@@ -73,6 +73,37 @@ if (document.querySelector('.select')) {
 				maxvalue: 7,
 				placeholdername: "младенец",
 				tails: ["младенец", "младенца", "младенцев"]
+			}
+		]
+	})
+}
+
+// Select guests
+if (document.getElementById('comfort')) {
+	const select = new MyCustomSelect("comfort", {
+		placeholder: "удобства номера",
+		class: '.card__input',
+		options: [
+			{
+				name: "спальни",
+				value: 2,
+				maxvalue: 3,
+				placeholdername: "спальни",
+				tails: ["спальня", "спальни", "спален"]
+			},
+			{
+				name: "кровати",
+				value: 2,
+				maxvalue: 4,
+				placeholdername: "кровати",
+				tails: ["кровать", "кровати", "кроватей"]
+			},
+			{
+				name: "ванные комнаты",
+				value: 0,
+				maxvalue: 2,
+				placeholdername: "ванные комнаты",
+				tails: ["ванная комната", "ванные комнаты", "ванных комнат"]
 			}
 		]
 	})

@@ -1,6 +1,6 @@
 class MyCustomSelect {
 	constructor($selector, data) {
-		this.$el = document.querySelector($selector)
+		this.$el = document.getElementById($selector)
 		this.data = data
 		this.mapPlaceholder = new Map()
 
@@ -10,15 +10,17 @@ class MyCustomSelect {
 
 	#render() {
 		this.#fillMap()
-		this.$el.innerHTML = selectTemplate(this.data)
+		this.$el.querySelector('.select__body').innerHTML = selectTemplate(this.data)
+
+		this.$el.querySelector('.card__input').innerHTML = `${this.#getSelectPlaceholder()}`
 	}
 
 	#setup() {
 		this.$el.addEventListener('click', (e) => {
 			// show options
-			if (e.target.closest('.select__title')) {
+			if (e.target.closest(this.data.class)) {
 				this.$el.querySelector('.select__body').classList.toggle('show')
-				this.$el.querySelector('.card__input').classList.toggle('show')
+				this.$el.querySelector(this.data.class).classList.toggle('show')
 
 				return
 			}
@@ -114,21 +116,11 @@ class MyCustomSelect {
 
 const selectTemplate = (data) => {
 	return `
-	<label class="select__title">
-		<div class="card__name">${data.title}</div>
-		<div type="text" class="card__input arrow arrow_d">
-			<span>${data.placeholder}</span >
-		</div >
-	</label >
-	<div class="select__body">
-
 		${optionsTemplate(data.options)}
-
 		<div class="select__buttons">
 			<div class="select__btn clear">очистить</div>
 			<div class="select__btn done">применить</div>
 		</div>
-	</div>
 `
 }
 

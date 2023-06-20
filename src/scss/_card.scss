@@ -81,11 +81,11 @@
 		}
 	}
 
-	// .card__datapicker
-	&__datapicker {
+	// .card__picker
+	&__picker {
 		z-index: 15;
 		background-color: $white;
-		width: 100%;
+		min-width: 100%;
 	}
 }
 

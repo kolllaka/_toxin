@@ -282,7 +282,7 @@ class Calendar {
 
 						break
 					default:
-
+						inputs[0].innerHTML = `${this.data.placeholder}-${this.data.placeholder}`
 				}
 
 				break

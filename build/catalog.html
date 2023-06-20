@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="./css/indexstyles.min.css">
+	<link rel="stylesheet" href="./css/catalogstyles.min.css">
 	<title>Каталог</title>
 </head>
 
@@ -50,11 +50,100 @@
 		<div class="page">
 			<div class="container">
 				<div class="page__content">
-					<aside>
+					<aside class="page__aside asidepage">
+						<!-- дата прибытия/отбытия -->
+						<div class="asidepage__row calendar">
+							<div class="card__inputs">
+								<label class="card__item">
+									<div class="card__name">Прибытие</div>
+									<div class="card__input arrow arrow_d">ДД.ММ.ГГГГ-ДД.ММ.ГГГГ</div>
+								</label>
+							</div>
+							<div class="card__picker datapicker">
 
+							</div>
+						</div>
+						<!-- гости -->
+						<div id="guests" class="asidepage__row select">
+							<div class="card__inputs">
+								<label class="card__item">
+									<div class="card__name">гости</div>
+									<div class="card__input arrow arrow_d">Сколько гостей</div>
+								</label>
+							</div>
+							<div class="card__picker select__body">
+
+							</div>
+						</div>
+						<!-- диапозон цен -->
+						<div class="asidepage__row"></div>
+						<!-- правила дома -->
+						<div class="asidepage__row">
+							<div class="card__row">
+								<div class="card__inputs">
+									<label class="card__item">
+										<div class="card__name">правила дома</div>
+										<div class="card__radio checkmark">
+											<label class="checkmark__label">
+												<input type="checkbox" name="special" class="checkmark__input">
+												<div class="checkmark__checkmark"></div>
+												<span class="checkmark__text">Можно курить</span>
+											</label>
+										</div>
+										<div class="card__radio checkmark">
+											<label class="checkmark__label">
+												<input type="checkbox" name="special" class="checkmark__input">
+												<div class="checkmark__checkmark"></div>
+												<span class="checkmark__text">Можно с питомцами</span>
+											</label>
+										</div>
+										<div class="card__radio checkmark">
+											<label class="checkmark__label">
+												<input type="checkbox" name="special" class="checkmark__input">
+												<div class="checkmark__checkmark"></div>
+												<span class="checkmark__text">Можно пригласить гостей (до 10 человек)</span>
+											</label>
+										</div>
+									</label>
+								</div>
+							</div>
+						</div>
+						<!-- доступность -->
+						<div class="asidepage__row">
+							<div class="card__row">
+								<div class="card__inputs">
+									<label class="card__item">
+										<div class="card__name">данные для входа в сервис</div>
+										<div class="card__radio checkmark">
+											<label class="checkmark__label">
+												<input type="checkmark" name="special" class="checkmark__input">
+												<div class="checkmark__checkmark"></div>
+												<span class="checkmark__text">Получать спецпредложения</span>
+											</label>
+										</div>
+									</label>
+								</div>
+							</div>
+						</div>
+						<!-- удобство номера -->
+						<div id="comfort" class="asidepage__row select">
+							<div class="card__inputs">
+								<label class="card__item">
+									<div class="card__name">удобства номера</div>
+									<div class="card__input arrow arrow_d"></div>
+								</label>
+							</div>
+							<div class="card__picker select__body">
+
+							</div>
+						</div>
+						<!-- дополнительные удобства -->
+						<div class="asidepage__row"></div>
 					</aside>
-					<main>
-
+					<main class="page__maincontent maincontent">
+						<div class="maincontent__title">Номера, которые мы для вас подобрали</div>
+						<div class="maincontent__body"></div>
+						<nav class="maincontent__nav"></nav>
 					</main>
 				</div>
 			</div>
@@ -148,6 +237,6 @@
 	</div>
 </body>
 
-<script src="./js/scripts.min.js"></script>
+<script src="./js/index.min.js"></script>
 
 </html>
