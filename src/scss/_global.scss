@@ -353,17 +353,26 @@ button{
 .price {
 
 	// .price__label
-
 	&__label {
 	}
 
 	// .price__range
-
 	&__range {
 	}
 
 	// .price__text
-
 	&__text {
 	}
 }
+
+
+.tab {
+	// .tab__body
+	&__body {
+		display: none;
+		&.show{
+			display: block;
+		}
+	}
+}
+

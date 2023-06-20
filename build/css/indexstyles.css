@@ -550,6 +550,14 @@ button:active {
   transition: all 0.3s ease 0s;
 }
 
+.tab__body {
+  display: none;
+}
+
+.tab__body.show {
+  display: block;
+}
+
 .header {
   z-index: 100;
   position: absolute;

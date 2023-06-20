@@ -78,7 +78,7 @@ if (document.getElementById('guests')) {
 	})
 }
 
-// Select guests
+// Select comfort
 if (document.getElementById('comfort')) {
 	const select = new MyCustomSelect("comfort", {
 		placeholder: "удобства номера",
