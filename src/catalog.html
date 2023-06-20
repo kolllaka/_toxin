@@ -23,7 +23,7 @@
 						<div class="asidepage__row calendar">
 							<div class="card__inputs">
 								<label class="card__item">
-									<div class="card__name">Прибытие</div>
+									<div class="card__name">даты пребывания в отеле</div>
 									<div class="card__input arrow arrow_d">ДД.ММ.ГГГГ-ДД.ММ.ГГГГ</div>
 								</label>
 							</div>
@@ -44,52 +44,69 @@
 							</div>
 						</div>
 						<!-- диапозон цен -->
-						<div class="asidepage__row"></div>
+						<div class="asidepage__row">
+							<div class="card__inputs">
+								<div class="card__item">
+									<div class="card__name">диапазон цены</div>
+									<div class="card__radio price">
+										<label class="price__label">
+											<div class="price__range">
+												<span id="price-start">10</span> - <span id="price-end">100</span>
+											</div>
+											<span class="price__text">Стоимость за сутки пребывания в номере</span>
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
 						<!-- правила дома -->
 						<div class="asidepage__row">
-							<div class="card__row">
-								<div class="card__inputs">
-									<label class="card__item">
-										<div class="card__name">правила дома</div>
-										<div class="card__radio checkmark">
-											<label class="checkmark__label">
-												<input type="checkbox" name="special" class="checkmark__input">
-												<div class="checkmark__checkmark"></div>
-												<span class="checkmark__text">Можно курить</span>
-											</label>
-										</div>
-										<div class="card__radio checkmark">
-											<label class="checkmark__label">
-												<input type="checkbox" name="special" class="checkmark__input">
-												<div class="checkmark__checkmark"></div>
-												<span class="checkmark__text">Можно с питомцами</span>
-											</label>
-										</div>
-										<div class="card__radio checkmark">
-											<label class="checkmark__label">
-												<input type="checkbox" name="special" class="checkmark__input">
-												<div class="checkmark__checkmark"></div>
-												<span class="checkmark__text">Можно пригласить гостей (до 10 человек)</span>
-											</label>
-										</div>
-									</label>
+							<div class="card__inputs">
+								<div class="card__item">
+									<div class="card__name">правила дома</div>
+									<div class="card__radio checkmark">
+										<label class="checkmark__label">
+											<input type="checkbox" name="special" class="checkmark__input">
+											<div class="checkmark__checkmark"></div>
+											<span class="checkmark__text">Можно курить</span>
+										</label>
+									</div>
+									<div class="card__radio checkmark">
+										<label class="checkmark__label">
+											<input type="checkbox" name="special" class="checkmark__input">
+											<div class="checkmark__checkmark"></div>
+											<span class="checkmark__text">Можно с питомцами</span>
+										</label>
+									</div>
+									<div class="card__radio checkmark">
+										<label class="checkmark__label">
+											<input type="checkbox" name="special" class="checkmark__input">
+											<div class="checkmark__checkmark"></div>
+											<span class="checkmark__text">Можно пригласить гостей (до 10 человек)</span>
+										</label>
+									</div>
 								</div>
 							</div>
 						</div>
 						<!-- доступность -->
 						<div class="asidepage__row">
-							<div class="card__row">
-								<div class="card__inputs">
-									<label class="card__item">
-										<div class="card__name">данные для входа в сервис</div>
-										<div class="card__radio checkmark">
-											<label class="checkmark__label">
-												<input type="checkmark" name="special" class="checkmark__input">
-												<div class="checkmark__checkmark"></div>
-												<span class="checkmark__text">Получать спецпредложения</span>
-											</label>
-										</div>
-									</label>
+							<div class="card__inputs">
+								<div class="card__item">
+									<div class="card__name">доступность</div>
+									<div class="card__radio checkmark">
+										<label class="checkmark__label">
+											<input type="checkbox" name="special" class="checkmark__input">
+											<div class="checkmark__checkmark"></div>
+											<span class="checkmark__text">Широкий коридор</span>
+										</label>
+									</div>
+									<div class="card__radio checkmark">
+										<label class="checkmark__label">
+											<input type="checkbox" name="special" class="checkmark__input">
+											<div class="checkmark__checkmark"></div>
+											<span class="checkmark__text">Помощник для инвалидов</span>
+										</label>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -106,7 +123,69 @@
 							</div>
 						</div>
 						<!-- дополнительные удобства -->
-						<div class="asidepage__row"></div>
+						<div class="asidepage__row">
+							<div class="card__inputs">
+								<div class="card__item">
+									<div class="card__name arrow arrow_d">дополнительные удобства</div>
+									<div class="card__radio checkmark">
+										<label class="checkmark__label">
+											<input type="checkbox" name="special" class="checkmark__input">
+											<div class="checkmark__checkmark"></div>
+											<span class="checkmark__text">Широкий коридор</span>
+										</label>
+									</div>
+									<div class="card__radio checkmark">
+										<label class="checkmark__label">
+											<input type="checkbox" name="special" class="checkmark__input" checked>
+											<div class="checkmark__checkmark"></div>
+											<span class="checkmark__text">Помощник для инвалидов</span>
+										</label>
+									</div>
+									<div class="card__radio checkmark">
+										<label class="checkmark__label">
+											<input type="checkbox" name="special" class="checkmark__input" checked>
+											<div class="checkmark__checkmark"></div>
+											<span class="checkmark__text">Завтрак</span>
+										</label>
+									</div>
+									<div class="card__radio checkmark">
+										<label class="checkmark__label">
+											<input type="checkbox" name="special" class="checkmark__input" checked>
+											<div class="checkmark__checkmark"></div>
+											<span class="checkmark__text">Письменный стол</span>
+										</label>
+									</div>
+									<div class="card__radio checkmark">
+										<label class="checkmark__label">
+											<input type="checkbox" name="special" class="checkmark__input">
+											<div class="checkmark__checkmark"></div>
+											<span class="checkmark__text">Стул для кормления</span>
+										</label>
+									</div>
+									<div class="card__radio checkmark">
+										<label class="checkmark__label">
+											<input type="checkbox" name="special" class="checkmark__input">
+											<div class="checkmark__checkmark"></div>
+											<span class="checkmark__text">Кроватка</span>
+										</label>
+									</div>
+									<div class="card__radio checkmark">
+										<label class="checkmark__label">
+											<input type="checkbox" name="special" class="checkmark__input">
+											<div class="checkmark__checkmark"></div>
+											<span class="checkmark__text">Телевизор</span>
+										</label>
+									</div>
+									<div class="card__radio checkmark">
+										<label class="checkmark__label">
+											<input type="checkbox" name="special" class="checkmark__input">
+											<div class="checkmark__checkmark"></div>
+											<span class="checkmark__text">Шампунь</span>
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
 					</aside>
 					<main class="page__maincontent maincontent">
 						<div class="maincontent__title">Номера, которые мы для вас подобрали</div>
