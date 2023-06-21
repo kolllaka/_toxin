@@ -1,4 +1,8 @@
 .page {
+	background-color: #f6f6f6;
+	padding-top: 30px;
+	padding-bottom: 70px;
+	margin-top: 70px;
 
 	// .page__content
 	&__content {
@@ -6,7 +10,6 @@
 		display: grid;
 		grid-template-columns: 266px auto;
 		gap: 60px;
-		margin-top: 70px+30px;
 	}
 
 	// .page__aside
