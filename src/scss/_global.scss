@@ -321,6 +321,7 @@ button{
 		height: 20px;
 		position: relative;
 		transition: all 0.3s ease 0s;
+		background-color: $white;
 		&::before{
 			content: '';
 			position: absolute;
