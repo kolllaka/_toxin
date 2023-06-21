@@ -1369,6 +1369,38 @@ button:active {
   border-bottom: 1px solid rgba(31, 32, 65, 0.1);
 }
 
+.cart__col {
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.5);
+}
+
+.cart__col span {
+  font-weight: 700;
+}
+
+.cart__room {
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 17px;
+  color: #1f2041;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  gap: 8px;
+}
+
+.cart__room::after {
+  content: attr(data-atr);
+  text-transform: uppercase;
+  color: #bc9cff;
+  font-weight: 700;
+  font-size: 12px;
+}
+
 .slider {
   position: relative;
 }

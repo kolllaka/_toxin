@@ -34,6 +34,31 @@
 
 	// .cart__col
 	&__col {
+		font-size: 14px;
+		line-height: 18px;
+		color: rgba($color: $colorText, $alpha: .5);
+		span {
+			font-weight: 700;
+		}
+	}
+
+	// .cart__room
+	&__room{
+		font-weight: 700;
+		font-size: 19px;
+		line-height: 17px;
+		color: rgba($color: $colorText, $alpha: 1);
+
+		display: flex;
+		align-items: baseline;
+		gap: 8px;
+		&::after{
+			content: attr(data-atr);
+			text-transform: uppercase;
+			color: $pirple;
+			font-weight: 700;
+			font-size: 12px;
+		}
 	}
 }
 .grade {
