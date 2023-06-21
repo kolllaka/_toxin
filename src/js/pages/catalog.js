@@ -60,7 +60,7 @@ if (document.getElementById('comfort')) {
 			},
 			{
 				name: "ванные комнаты",
-				value: 1,
+				value: 0,
 				maxvalue: 2,
 				placeholdername: "ванные комнаты",
 				tails: ["ванная комната", "ванные комнаты", "ванных комнат"]
