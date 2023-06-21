@@ -136,3 +136,109 @@ if (document.querySelector('.slider')) {
 		});
 	}
 }
+
+// Rating
+const ratings = document.querySelectorAll('.grade');
+
+if (ratings.length > 0) {
+	initRatings();
+}
+
+function initRatings() {
+	let ratingActive, ratingValue;
+	// Перебор по всем рейтингам
+	for (let index = 0; index < ratings.length; index++) {
+		const rating = ratings[index];
+		initRating(rating);
+	}
+	// Инициализация конкретного рейтинга
+	function initRating(rating) {
+		initRatingVars(rating);
+		setRatingActiveWidth();
+
+		// ЕСли есть модификатор grade_set то даёт возможность собирать рейтинг
+		if (rating.classList.contains('grade_set')) {
+			setRating(rating);
+		}
+	}
+	// Инициализация переменных
+	function initRatingVars(rating) {
+		ratingActive = rating.querySelector('.grade__active');
+		ratingValue = rating.querySelector('.grade__active').getAttribute('data-rate');
+		//ratingValue = rating.querySelector('.grade__active').dataset.value;
+	}
+	// Изменяет ширину звёзд
+	function setRatingActiveWidth(index = ratingValue) {
+		const ratingActiveWidth = index / 0.05;
+		ratingActive.style.width = `${ratingActiveWidth}%`;
+	}
+	// Даёт возможность устанавливать оценку
+	function setRating(rating) {
+		const ratingItems = rating.querySelectorAll('.grade__item');
+		for (let index = 0; index < ratingItems.length; index++) {
+			const ratingItem = ratingItems[index];
+			ratingItem.addEventListener('mouseenter', function (e) {
+				// Обновление переменных
+				initRatingVars(rating);
+				// Обновление активных звёзд
+				setRatingActiveWidth(ratingItem.value);
+			});
+			ratingItem.addEventListener('mouseleave', function (e) {
+				// Обновление активных звёзд
+				setRatingActiveWidth();
+			});
+			ratingItem.addEventListener('click', function (e) {
+				// Обновление переменных
+				initRatingVars(rating);
+
+				if (rating.dataset.ajax) {
+					// "Отправить" на сервер
+					setRatingVars(ratingItem.value, rating);
+				} else {
+					// Отобразить указанную оценку
+					ratingValue = index + 1;
+					setRatingActiveWidth();
+				}
+			});
+		}
+	}
+
+	async function setRatingVars(values, rating) {
+		if (!rating.classList.contains('rating_sending')) {
+			rating.classList.add('rating_sending');
+
+			// Отправка данных (value) на сервер
+			let response = await fetch('rating.json', {
+				method: 'GET',
+
+				// Код для отправки на сервер
+				// body: JSON.stringify({
+				// 	userRating: value
+				// }),
+				// headers: {
+				// 	'content-type': 'application/json'
+				// }
+
+			});
+			if (response.ok) {
+				const result = await response.json();
+
+				// Получение нового рейтинга
+				const newRating = result.newRating;
+
+				// Вывод нового среднего рейтинга
+				rating.querySelector('.grade__active').setAttribute('data-rate', newRating);
+
+				// Обновление активных звёзд
+				setRatingActiveWidth();
+
+				rating.classList.remove('rating_sending');
+			} else {
+				// Ошибка O_o
+				alert("Ошибка");
+
+				rating.classList.remove('rating_sending');
+			}
+		}
+	}
+};
