@@ -1028,6 +1028,7 @@ button:active {
   border-radius: 4px;
   padding: 13px 15px;
   width: 100%;
+  background-color: #FFFFFF;
 }
 
 .card__input.show {
