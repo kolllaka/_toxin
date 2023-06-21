@@ -409,7 +409,7 @@ class MyCustomSelect {
 		this.#fillMap()
 		this.$el.querySelector('.select__body').innerHTML = selectTemplate(this.data)
 
-		this.$el.querySelector('.card__input').innerHTML = `${this.#getSelectPlaceholder()}`
+		this.$el.querySelector('.card__input').innerHTML = `<span>${this.#getSelectPlaceholder()}</span>`
 	}
 
 	#setup() {
@@ -452,7 +452,7 @@ class MyCustomSelect {
 				if (isChange) {
 					quantity.querySelector('.quantity__value').innerHTML = `${this.data.options[index].value}`
 					this.mapPlaceholder.set(option.placeholdername, mapData)
-					this.$el.querySelector('.card__input').innerHTML = `${this.#getSelectPlaceholder()}`
+					this.$el.querySelector('.card__input').innerHTML = `<span>${this.#getSelectPlaceholder()}</span>`
 				}
 			}
 
@@ -507,7 +507,7 @@ class MyCustomSelect {
 		})
 		this.mapPlaceholder.clear()
 		this.#fillMap()
-		this.$el.querySelector('.card__input').innerHTML = `${this.#getSelectPlaceholder()}`
+		this.$el.querySelector('.card__input').innerHTML = `<span>${this.#getSelectPlaceholder()}</span>`
 	}
 }
 
@@ -545,6 +545,7 @@ const termOfNum = (number, tails) => {
 document.addEventListener('click', (e) => {
 	if (e.target.closest(".tab__btn")) {
 		console.log(e.target.closest(".tab").querySelector(".tab__body"));
+		e.target.closest(".tab").querySelector(".tab__btn").classList.toggle('show')
 		e.target.closest(".tab").querySelector(".tab__body").classList.toggle('show')
 	}
 })
@@ -602,7 +603,7 @@ if (document.getElementById('comfort')) {
 			},
 			{
 				name: "ванные комнаты",
-				value: 0,
+				value: 1,
 				maxvalue: 2,
 				placeholdername: "ванные комнаты",
 				tails: ["ванная комната", "ванные комнаты", "ванных комнат"]

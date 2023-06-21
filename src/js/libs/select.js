@@ -12,7 +12,7 @@ class MyCustomSelect {
 		this.#fillMap()
 		this.$el.querySelector('.select__body').innerHTML = selectTemplate(this.data)
 
-		this.$el.querySelector('.card__input').innerHTML = `${this.#getSelectPlaceholder()}`
+		this.$el.querySelector('.card__input').innerHTML = `<span>${this.#getSelectPlaceholder()}</span>`
 	}
 
 	#setup() {
@@ -55,7 +55,7 @@ class MyCustomSelect {
 				if (isChange) {
 					quantity.querySelector('.quantity__value').innerHTML = `${this.data.options[index].value}`
 					this.mapPlaceholder.set(option.placeholdername, mapData)
-					this.$el.querySelector('.card__input').innerHTML = `${this.#getSelectPlaceholder()}`
+					this.$el.querySelector('.card__input').innerHTML = `<span>${this.#getSelectPlaceholder()}</span>`
 				}
 			}
 
@@ -110,7 +110,7 @@ class MyCustomSelect {
 		})
 		this.mapPlaceholder.clear()
 		this.#fillMap()
-		this.$el.querySelector('.card__input').innerHTML = `${this.#getSelectPlaceholder()}`
+		this.$el.querySelector('.card__input').innerHTML = `<span>${this.#getSelectPlaceholder()}</span>`
 	}
 }
 

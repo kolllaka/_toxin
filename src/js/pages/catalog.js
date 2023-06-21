@@ -2,6 +2,7 @@
 document.addEventListener('click', (e) => {
 	if (e.target.closest(".tab__btn")) {
 		console.log(e.target.closest(".tab").querySelector(".tab__body"));
+		e.target.closest(".tab").querySelector(".tab__btn").classList.toggle('show')
 		e.target.closest(".tab").querySelector(".tab__body").classList.toggle('show')
 	}
 })
@@ -59,7 +60,7 @@ if (document.getElementById('comfort')) {
 			},
 			{
 				name: "ванные комнаты",
-				value: 0,
+				value: 1,
 				maxvalue: 2,
 				placeholdername: "ванные комнаты",
 				tails: ["ванная комната", "ванные комнаты", "ванных комнат"]
