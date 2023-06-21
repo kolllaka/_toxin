@@ -258,19 +258,17 @@ button:active {
 
 .arrow {
   cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 10px;
+  position: relative;
 }
 
 .arrow::after {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 0;
+  padding: 22px;
   content: "";
   display: block;
   height: 22px;
@@ -282,11 +280,35 @@ button:active {
   background: url("../img/icons/arrow_forwardgr.svg") center no-repeat;
 }
 
+.arrow_d {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  padding: 0px 15px 0px 0px;
+}
+
 .arrow_d::after {
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  content: "";
+  display: block;
+  height: 22px;
+  width: 22px;
   background: url("../img/icons/arrow_d.svg") center no-repeat;
 }
 
-.arrow.show::after {
+.arrow_d.show::after {
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
