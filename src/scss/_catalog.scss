@@ -19,7 +19,6 @@
 }
 
 .asidepage {
-
 	// .asidepage__row
 	&__row {
 		margin-bottom: 30px;
@@ -27,17 +26,32 @@
 }
 
 .maincontent {
-
 	// .maincontent__title
 	&__title {
+		margin-bottom: 20px;
 	}
 
 	// .maincontent__body
 	&__body {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 20px 12px;
 	}
 
-	// .maincontent__nav
-	&__nav {
+	// .maincontent__item
+	&__item {
+	}
+
+	// .maincontent__pagging
+	&__pagging {
+	}
+}
+
+.page {
+
+	// .page__maincontent
+
+	&__maincontent {
 	}
 }
 

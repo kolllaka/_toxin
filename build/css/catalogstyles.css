@@ -653,6 +653,16 @@ button:active {
   margin-bottom: 30px;
 }
 
+.maincontent__title {
+  margin-bottom: 20px;
+}
+
+.maincontent__body {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px 12px;
+}
+
 .calendar {
   position: relative;
 }
@@ -1118,6 +1128,42 @@ button:active {
 
 .quantity__plus {
   background: url("../img/icons/plus.svg") center no-repeat;
+}
+
+.cart {
+  border: 1px solid #000;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+  height: 100%;
+}
+
+.cart__body {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  height: 100%;
+}
+
+.cart__description {
+  padding: 20px;
+}
+
+.cart__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.cart__line {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(31, 32, 65, 0.1);
 }
 
 .footer__top {

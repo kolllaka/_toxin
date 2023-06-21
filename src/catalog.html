@@ -191,8 +191,43 @@
 					</aside>
 					<main class="page__maincontent maincontent">
 						<div class="maincontent__title">Номера, которые мы для вас подобрали</div>
-						<div class="maincontent__body"></div>
-						<nav class="maincontent__nav"></nav>
+						<div class="maincontent__body">
+							<div class="maincontent__item">
+								@@include('./html/_cart.html',{
+								"redirect":"./room.html",
+								"path1":"./img/catalog/01/01.jpg",
+								"path2":"./img/catalog/02/02.jpg",
+								"path3":"./img/catalog/03/03.jpg",
+								"path4":"./img/catalog/04/04.jpg",
+								})
+
+							</div>
+							<div class="maincontent__item">
+								@@include('./html/_cart.html',{
+								"lorem":"Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
+								})
+
+							</div>
+							<div class="maincontent__item">
+								@@include('./html/_cart.html',{
+								"lorem":"Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
+								})
+
+							</div>
+							<div class="maincontent__item">
+								@@include('./html/_cart.html',{
+								"lorem":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem, sit. ",
+								})
+
+							</div>
+							<div class="maincontent__item">
+								@@include('./html/_cart.html',{
+								"lorem":"Lorem ipsum dolor, sit amet consectetur adipisi",
+								})
+
+							</div>
+						</div>
+						<nav class="maincontent__pagging"></nav>
 					</main>
 				</div>
 			</div>
