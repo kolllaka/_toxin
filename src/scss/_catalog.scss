@@ -33,13 +33,18 @@
 
 	// .maincontent__body
 	&__body {
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
+		// display: grid;
+		// grid-template-columns: 1fr 1fr 1fr;
+		min-width: 0;
+		display: flex;
+		flex-wrap: wrap;
 		gap: 20px 12px;
 	}
 
 	// .maincontent__item
 	&__item {
+		flex: 0 0 32%;
+		width: 100px;
 	}
 
 	// .maincontent__pagging
