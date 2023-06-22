@@ -298,6 +298,7 @@ button:active {
   height: 22px;
   width: 22px;
   background: url("../img/icons/arrow_d.svg") center no-repeat;
+  background-color: inherit;
 }
 
 .arrow_d.show::after {
@@ -998,7 +999,10 @@ button:active {
 
 .card {
   padding: 40px 30px 30px;
-  border: 1px solid rgba(0, 0, 0, 0.1215686275);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: #FFF;
+  -webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
 
@@ -1056,7 +1060,7 @@ button:active {
       -ms-flex-pack: justify;
           justify-content: space-between;
   text-transform: uppercase;
-  margin-bottom: 5px;
+  margin-bottom: 7px;
 }
 
 .card__input {

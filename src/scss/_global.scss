@@ -158,7 +158,8 @@ button{
 			margin: 0 12px;
 			height: 22px;
 			width: 22px;
-			background:  url("../img/icons/arrow_d.svg") center no-repeat;
+			background: url("../img/icons/arrow_d.svg") center no-repeat;
+			background-color: inherit;
 		}
 		&.show{
 			&::after{
