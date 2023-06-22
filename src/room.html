@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./css/roomstyles.min.css">
+	<title>комната</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<!-- Header -->
+		@@include('./html/_header.html')
+
+		<!-- Main Page -->
+		<div class="page">
+			<div class="page__hero hero" style="display: none;">
+				<div class="hero__column">
+					<img src="./img/index/bg.jpg" alt="">
+				</div>
+				<div class="hero__column">
+					<div class="hero__row">
+						<img src="./img/index/bg.jpg" alt="">
+					</div>
+					<div class="hero__row">
+						<img src="./img/index/bg.jpg" alt="">
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="page__body">
+					<div class="page__content pagecontent">
+						<div class="pagecontent__row">
+							<div class="pagecontent__column">
+								<div class="pagecontent__cart cartroom">
+									<div class="cartroom__title"><span>Сведения о номере</span></div>
+									<div class="cartroom__body info">
+										<div class="info__body">
+											<div class="info__item">
+												<div class="info__img">
+													<img src="./img/icons/room/comfort.png" alt="">
+												</div>
+												<label class="info__label">
+													<span>Комфорт</span>
+													<span>Шумопоглощающие стены</span>
+												</label>
+											</div>
+											<span class="info__line"></span>
+											<div class="info__item">
+												<div class="info__img">
+													<img src="./img/icons/room/convenience.png" alt="">
+												</div>
+												<label class="info__label">
+													<span>Удобство</span>
+													<span>Окно в каждой из спален</span>
+												</label>
+											</div>
+											<span class="info__line"></span>
+											<div class="info__item">
+												<div class="info__img">
+													<img src="./img/icons/room/cosiness.png" alt="">
+												</div>
+												<label class="info__label">
+													<span>Уют</span>
+													<span>Номер оснащён камином</span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="pagecontent__column">
+								<div class="pagecontent__cart cartroom">
+									<div class="cartroom__title"><span>Впечатления от номера</span></div>
+									<div class="cartroom__body impress">
+
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="pagecontent__row">
+							<div class="pagecontent__cart cartroom">
+								<div class="cartroom__title">
+									<span>Отзывы посетителей номера</span>
+									<span>2 отзыва</span>
+								</div>
+								<div class="cartroom__body reviews">
+									<div class="reviews__body">
+										<div class="reviews__item">
+											<div class="reviews__row">
+												<div class="reviews__img">
+													<img src="./img/users/1/user.png" alt="">
+												</div>
+												<div class="reviews__label">
+													<span>Мурад Сарафанов</span>
+													<span>5 дней назад</span>
+												</div>
+											</div>
+											<div class="reviews__row">
+												<div class="reviews__btn">
+													<div class="reviews__like like">
+														<span>12</span>
+													</div>
+												</div>
+												<div class="reviews__comment">
+													<p>
+														Великолепный матрас на кровати в основной спальне! А пуфик вообще
+														потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал
+														комплименты повару — никто не жаловался из соседей.
+													</p>
+												</div>
+											</div>
+										</div>
+										<div class="reviews__item">
+											<div class="reviews__row">
+												<div class="reviews__img">
+													<img src="./img/users/2/user.png" alt="">
+												</div>
+												<div class="reviews__label">
+													<span>Патрисия Стёклышкова</span>
+													<span>Неделю назад</span>
+												</div>
+											</div>
+											<div class="reviews__row">
+												<div class="reviews__btn">
+													<div class="reviews__like">
+														<span>2</span>
+													</div>
+												</div>
+												<div class="reviews__comment">
+													<p>
+														Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую
+														заказать, каждый день новое блюдо и десерт как комплимент
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="pagecontent__row">
+							<div class="pagecontent__column">
+								<div class="pagecontent__cart cartroom">
+									<div class="cartroom__title"><span class="rules__marker rules__marker-none">Правила</span>
+									</div>
+									<div class="cartroom__body rules">
+										<ul class="rules__body">
+											<li class="rules__text"><span class="rules__marker">Нельзя с питомцами</span></li>
+											<li class="rules__text"><span class="rules__marker">Без вечеринок и мероприятий</span>
+											</li>
+											<li class="rules__text"><span class="rules__marker">Время прибытия — после 13:00,
+													а выезд до 12:00</span></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="pagecontent__column">
+								<div class="pagecontent__cart cartroom">
+									<div class="cartroom__title"><span>Отмена</span></div>
+									<div class="cartroom__body cancel">
+										<p>
+											Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до
+											прибытия вы получите полный возврат за вычетом сбора за услуги.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="page__aside">
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		@@include('./html/_footer.html')
+
+	</div>
+</body>
+
+<script src="./js/room.min.js"></script>
+
+</html>

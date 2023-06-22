@@ -527,6 +527,7 @@ const termOfNum = (number, tails) => {
 	return tails[(number % 100 > 4 && number % 100 < 20) ? 2 : cases[(number % 10 < 5) ? number % 10 : 5]];
 }
 
+
 // Custom Scripts
 // Burger menu
 const burger = document.querySelector('.burger'),
