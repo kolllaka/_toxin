@@ -383,6 +383,11 @@ button{
 
 
 .tab {
+	// .tab__btn
+	&__btn{
+		background-color: $background;
+	}
+
 	// .tab__body
 	&__body {
 		display: none;
