@@ -45,6 +45,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		gap: 20px 12px;
+		margin-bottom: 40px;
 	}
 
 	// .maincontent__item
@@ -55,19 +56,26 @@
 
 	// .maincontent__pagging
 	&__pagging {
+		display: flex;
+		justify-content: center;
+		width: 100%;
 	}
 }
+.price {
 
-.page {
-
-	// .page__maincontent
-
-	&__maincontent {
+	// .price__label
+	&__label {
+		color: rgba($colorText, 0.50);
+		font-size: 12px;
+		text-transform: uppercase;
 	}
-}
 
-.price-filter {
-	// .price-filter__slider
+	// .price__range
+	&__range {
+		padding-top: 10px;
+	}
+	
+	// .price__slider
 	&__slider {
 		border: 1px solid rgba($color: $colorText, $alpha: .25);
 		border-radius: 3px;
@@ -126,4 +134,89 @@
 			display: none;
 		}
 	}
+
+	// .price__text
+	&__text {
+		display: inline-block;
+		padding-top: 10px;
+
+		color:  rgba($colorText, 0.50);
+		font-size: 12px;
+		line-height: 14px;
+	}
 }
+
+.pagging {
+	width: 100%;
+	// .pagging__body
+	&__body{
+		width: 100%;
+	}
+
+	// .pagging__pages
+	&__pages {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		gap: 1px;
+		margin-bottom: 11px;
+	}
+
+	// .pagging__page
+	&__page {
+		flex: 0 0 40px;
+		height: 40px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		&.pagging__inv{
+			display: none;
+		}
+	}
+
+	// .pagging__link
+	&__link {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+		span{
+			font-size: 12px;
+			line-height: 15px;
+			color: rgba($color: $colorText, $alpha: .5);
+		}
+		&.pagging__active{
+			background: linear-gradient(180deg, $pirple, $blue);
+			span{
+				color: $white;
+			}
+		}
+	}
+
+	// .pagging__arrow
+	&__arrow{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+		background: url("../img/icons/arrow_forward.svg") center no-repeat, linear-gradient(180deg, $colorgreen, $colorblue);
+		&-prev {
+			transform: rotate(180deg);
+		}
+		&-next {
+		}
+	}
+
+	// .pagging__text
+	&__text {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+

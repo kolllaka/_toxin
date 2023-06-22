@@ -3483,7 +3483,7 @@ function initRatings() {
 };
 
 // price range
-const priceFilter = document.querySelector('.price-filter__slider');
+const priceFilter = document.querySelector('.price__slider');
 
 if (priceFilter) {
 	noUiSlider.create(priceFilter, {

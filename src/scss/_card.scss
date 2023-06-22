@@ -96,7 +96,7 @@
 
 	// .card__picker
 	&__picker {
-		z-index: 15;
+		z-index: 20;
 		background-color: $white;
 		min-width: 100%;
 	}
@@ -111,7 +111,7 @@
 
 	// .select__body
 	&__body {
-		z-index: 5;
+		z-index: 15;
 		display: none;
 		padding: 13px;
 		background-color: $white;
