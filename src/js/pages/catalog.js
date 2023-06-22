@@ -243,3 +243,28 @@ function initRatings() {
 		}
 	}
 };
+
+// price range
+const priceFilter = document.querySelector('.price-filter__slider');
+
+if (priceFilter) {
+	noUiSlider.create(priceFilter, {
+		start: [5000, 10000],
+		connect: true,
+		format: wNumb({
+			decimals: 0,
+			thousand: ' ',
+			suffix: '₽'
+		}),
+		range: {
+			'min': [0],
+			'max': [16000]
+		}
+	});
+	const priceStart = document.getElementById('price-start');
+	const priceEnd = document.getElementById('price-end');
+	priceFilter.noUiSlider.on('update', function (values) {
+		priceStart.innerHTML = values[0];
+		priceEnd.innerHTML = values[1];
+	});
+}

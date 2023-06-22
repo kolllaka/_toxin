@@ -66,3 +66,64 @@
 	}
 }
 
+.price-filter {
+	// .price-filter__slider
+	&__slider {
+		border: 1px solid rgba($color: $colorText, $alpha: .25);
+		border-radius: 3px;
+		box-sizing: border-box;
+		width: 266px;
+		height: 6px;
+		background-color: #fff;
+		position: relative;
+		.noUi-base,
+		.noUi-connects {
+			position: relative;
+			height: 100%;
+			width: 100%;
+		}
+		.noUi-origin,
+		.noUi-connect {
+			will-change: transform;
+			position: absolute;
+			width: 10%;
+			height: 0;
+			z-index: 1;
+			top: -1px;
+			right: 0;
+			transform-origin: 0 0;
+			transform-style: flat;
+		}
+		.noUi-connect {
+			background: linear-gradient(180deg, $colorgreen, #66d2ea);
+			border-top: 1px solid $colorgreen;
+			border-bottom: 1px solid #66d2ea;
+			box-sizing: content-box;
+			width: 100%;
+			height: 100%;
+		}
+		.noUi-handle {
+			width: 16px;
+			height: 16px;
+			position: absolute;
+			right: -10px;
+			top: -5px;
+			background-color: #fff;
+			border-radius: 50%;
+			cursor: pointer;
+			&::after {
+				content: "";
+				width: 12px;
+				height: 12px;
+				position: absolute;
+				top: 2px;
+				left: 2px;
+				background: linear-gradient(180deg, $colorgreen, #66d2ea);
+				border-radius: 50%;
+			}
+		}
+		.noUi-tooltip {
+			display: none;
+		}
+	}
+}
