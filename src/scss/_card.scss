@@ -39,6 +39,9 @@
 
 	// .card__name
 	&__name {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 		text-transform: uppercase;
 		margin-bottom: 5px;
 	}
