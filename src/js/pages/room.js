@@ -14,3 +14,43 @@ document.addEventListener('click', (e) => {
 		}
 	}
 })
+
+
+// Select guests
+if (document.getElementById('guests')) {
+	const select = new MyCustomSelect("guests", {
+		placeholder: "Сколько гостей",
+		class: '.card__input',
+		options: [
+			{
+				name: "взрослыe",
+				value: 2,
+				maxvalue: 7,
+				placeholdername: "гость",
+				tails: ["гость", "гостя", "гостей"]
+			},
+			{
+				name: "дети",
+				value: 1,
+				maxvalue: 7,
+				placeholdername: "гость",
+				tails: ["гость", "гостя", "гостей"]
+			},
+			{
+				name: "младенцы",
+				value: 0,
+				maxvalue: 7,
+				placeholdername: "младенец",
+				tails: ["младенец", "младенца", "младенцев"]
+			}
+		]
+	})
+}
+
+// Calendar
+if (document.querySelector('.calendar')) {
+	const calendar = new Calendar('.calendar', {
+		placeholder: 'ДД.ММ.ГГГГ',
+		class: '.card__input'
+	})
+}

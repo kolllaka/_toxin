@@ -8,8 +8,11 @@
 
 	// .page__body
 	&__body {
+		margin-top: 70px;
+		padding-top: 70px;
+		padding-bottom: 70px;
 		display: grid;
-		grid-template-columns: auto 20%;
+		grid-template-columns: auto 33%;
 		gap: 70px;
 	}
 
@@ -17,8 +20,9 @@
 	&__content {
 	}
 
-	// .page__aside
-	&__aside {
+	// page__card
+	&__card {
+
 	}
 }
 
@@ -34,9 +38,6 @@
 }
 
 .pagecontent {
-	margin-top: 70px;
-	padding-top: 70px;
-	padding-bottom: 70px;
 	display: flex;
 	flex-direction: column;
 	gap: 30px;
@@ -177,18 +178,18 @@
 		position: absolute;
 		top: 0;
 		left: 50%;
-		width: 40px;
+		min-width: 40px;
 		height: 20px;
 		transform: translateX(-50%);
 		border-radius: 10px;
 		border: 1px solid rgba($colorText, 0.25);
 		background: $white;
+		padding: 0 3px 0 1px;
 		span{
 			color: rgba($colorText, 0.25);
 			font-size: 10px;
 			display: flex;
 			align-items: center;
-			gap: 1px;
 			&::before{
 				flex-grow: 0;
 				flex-shrink: 0;
@@ -219,6 +220,9 @@
 
 	// .rules__body
 	&__body {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
 	}
 
 	// .rules__text
@@ -248,3 +252,102 @@
 
 .cancel {
 }
+
+
+.check {
+	// .check__body
+	&__body {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		margin-bottom: 30px;
+	}
+
+	// .check__row
+	&__row {
+		display: grid;
+		grid-template-columns: 1fr 20px 80px;
+		gap: 4px;
+		align-items: baseline;
+	}
+
+	// .check__name
+	&__name {
+		display: inline-flex;
+		align-items: baseline;
+	}
+
+	// .check__info
+	&__info {
+		cursor: pointer;
+		width: 20px;
+		height: 20px;
+		display: block;
+		border-radius: 50%;
+		border: 1px solid rgba($colorText, 0.25);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+
+		color: rgba($colorText, 0.25);
+		font-size: 12px;
+		font-weight: 700;
+		line-height: 14px;
+		&:hover {
+			.check__textinfo{
+				display: block;
+			}
+		}
+	}
+
+	// .check__textinfo
+	&__textinfo {
+		z-index: 10;
+		display: none;
+		position: absolute;
+		top: 110%;
+		left: 0;
+		width: 100px;
+		background-color: $white;
+		border: 1px solid rgba($colorText, 0.25);
+		border-radius: 4px;
+		padding: 4px;
+		color: $colorText;
+	}
+
+	// .check__info-null
+	&__info-null {
+		opacity: 0;
+	}
+
+	// .check__cost
+	&__cost {
+		flex: 0 0 80px;
+		text-align: end;
+	}
+
+	// .check__totalrow
+	&__totalrow {
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+		font-size: 19px;
+		font-weight: 700;
+	}
+
+	// .check__totalname
+	&__totalname {
+	}
+
+	// .check__dashed
+	&__dashed {
+		flex: 1 1 auto;
+		border-bottom: 1px dotted rgba($colorText, 0.25);
+	}
+
+	// .check__totalcost
+	&__totalcost {
+	}
+}
+
