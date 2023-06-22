@@ -58,6 +58,15 @@
 		&:not(:last-child){
 			margin-bottom: 10px;
 		}
+		display: flex;
+		align-items: center;
+		justify-content: start;
+		span{
+			overflow: hidden;
+			max-width: 160px;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
 	}
 
 	// .card__radio

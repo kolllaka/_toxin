@@ -287,20 +287,6 @@ button:active {
   position: relative;
 }
 
-.arrow_d span {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  overflow: hidden;
-  max-width: 200px;
-  -o-text-overflow: ellipsis;
-     text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
 .arrow_d::after {
   content: "";
   display: block;
@@ -1245,6 +1231,15 @@ button:active {
   padding: 13px 15px;
   width: 100%;
   background-color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
 }
 
 .card__input.show {
@@ -1254,6 +1249,14 @@ button:active {
 
 .card__input:not(:last-child) {
   margin-bottom: 10px;
+}
+
+.card__input span {
+  overflow: hidden;
+  max-width: 160px;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .card__radio {

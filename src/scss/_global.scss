@@ -148,14 +148,6 @@ button{
 	&_d {
 		cursor: pointer;
 		position: relative;
-		span{
-			display: flex;
-			align-items: center;
-			overflow: hidden;
-			max-width: 200px;
-			text-overflow: ellipsis;
-			white-space: nowrap;
-		}
 		&::after {
 			content: "";
 			display: block;
