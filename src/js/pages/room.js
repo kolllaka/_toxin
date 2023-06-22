@@ -54,3 +54,38 @@ if (document.querySelector('.calendar')) {
 		class: '.card__input'
 	})
 }
+
+// Rate
+if (document.getElementById('MyCanvas')) {
+	data = {
+		rates: [
+			{
+				name: "Великолепно",
+				value: 130,
+				colors1: "#FFE39C",
+				colors2: "#FFBA9C"
+			},
+			{
+				name: "Хорошо",
+				value: 65,
+				colors1: "#6FCF97",
+				colors2: "#66D2EA"
+			},
+			{
+				name: "Удовлетворительно",
+				value: 65,
+				colors1: "#BC9CFF",
+				colors2: "#8BA4F9"
+			},
+			{
+				name: "Разочарован",
+				value: 0,
+				colors1: "#909090",
+				colors2: "#3D4975"
+			},
+		],
+		desc: true,
+		conva: 2
+	}
+	MyRateOnCanvas('MyCanvas', data)
+}
