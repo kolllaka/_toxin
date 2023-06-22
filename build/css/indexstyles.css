@@ -282,36 +282,42 @@ button:active {
 
 .arrow_d {
   cursor: pointer;
+  position: relative;
+}
+
+.arrow_d span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 10px;
-  padding: 0px 15px 0px 0px;
+  overflow: hidden;
+  max-width: 200px;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .arrow_d::after {
-  -webkit-box-flex: 0;
-      -ms-flex-positive: 0;
-          flex-grow: 0;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
   content: "";
   display: block;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 0;
+  margin: 0 12px;
   height: 22px;
   width: 22px;
   background: url("../img/icons/arrow_d.svg") center no-repeat;
 }
 
 .arrow_d.show::after {
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
+  -webkit-transform: translateY(-50%) rotate(180deg);
+      -ms-transform: translateY(-50%) rotate(180deg);
+          transform: translateY(-50%) rotate(180deg);
 }
 
 .radio {
@@ -1065,14 +1071,6 @@ button:active {
   padding: 13px 15px;
   width: 100%;
   background-color: #FFFFFF;
-}
-
-.card__input span {
-  overflow: hidden;
-  min-width: 150px;
-  -o-text-overflow: ellipsis;
-     text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
 .card__input.show {

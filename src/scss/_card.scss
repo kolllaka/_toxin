@@ -51,12 +51,6 @@
 		padding: 13px 15px;
 		width: 100%;
 		background-color: $white;
-		span{
-			overflow: hidden;
-			min-width: 150px;
-			text-overflow: ellipsis;
-			white-space: nowrap;
-		}
 		&.show{
 			border-radius: 4px 4px 0 0;
 			border-bottom: 1px solid transparent;
