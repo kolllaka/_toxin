@@ -56,7 +56,8 @@ if (document.querySelector('.calendar')) {
 }
 
 // Rate
-if (document.getElementById('MyCanvas')) {
+const myCanvas = document.querySelector('.impress')
+if (myCanvas) {
 	data = {
 		rates: [
 			{
@@ -88,4 +89,20 @@ if (document.getElementById('MyCanvas')) {
 		conva: 2
 	}
 	MyRateOnCanvas('MyCanvas', data)
+
+	let totalValue = totalCount(data.rates)
+	let tail = termOfNum(totalValue, ["гость", "гостя", "гостей"])
+	myCanvas.querySelector('.impress__label').innerHTML = `<span>${totalValue} ${tail}</span>`
+
+	let rateList = myCanvas.querySelector('.impress__list')
+	console.log(rateList);
+	rateList.innerHTML = data.rates.map((rate) => {
+		return `
+		<li class="impress__item">
+		<span class="impress__dott"
+			style="background: linear-gradient(180deg, ${rate.colors1} 0%, ${rate.colors2} 100%);"></span>
+		<span>${rate.name}</span>
+	</li>
+		`
+	}).join(' ')
 }

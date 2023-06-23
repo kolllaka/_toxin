@@ -114,7 +114,47 @@
 }
 
 .impress {
+	display: flex;
+	gap: 30px;
+	align-items: flex-end;
+	// .impress__canvas
+	&__canvas {
+		position: relative;
+		height: 120px;
+		width: 120px;
+	}
+
+	// .impress__label
+	&__label {
+		position: absolute;
+		z-index: 100;
+		inset: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	// .impress__list
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+	}
+
+	// .impress__item
+	&__item {
+		display: flex;
+		align-items: center;
+		gap: 5px;
+		& .impress__dott{
+			display: block;
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+		}
+	}
 }
+
 .reviews {
 	// .reviews__body
 	&__body {

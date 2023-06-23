@@ -537,9 +537,10 @@ const MyRateOnCanvas = ($selector, data) => {
 }
 
 const draw = (ctx, data) => {
-	let totalValue = data.rates.reduce((count, acc) => (+acc.value + count), 0)
+	let totalValue = totalCount(data.rates)
 	let endAngle = -Math.PI / 2;
 	let canvas = { start: ctx.height / 2, end: ctx.height / 2, radiusIn: ctx.height / 2 - 4, radiusOut: ctx.height / 2 }
+
 	data.rates.forEach((rate) => {
 		if (rate.value) {
 			startAngle = endAngle;
@@ -577,44 +578,9 @@ const draw = (ctx, data) => {
 	ctx.arc(canvas.start, canvas.end, canvas.radiusIn, 0, 2 * Math.PI);
 	ctx.closePath();
 	ctx.fill();
-
-	// if (data.desc) {
-	// 	document.querySelector(`[for="${myCanvas.id}"]`).innerHTML = "<span>" + totalValue + "</span> голосов";
-	// }
 }
 
-const count = (arr) => arr.reduce((count, acc) => (+acc.value + count), 0);
-
-data = {
-	rates: [
-		{
-			name: "Великолепно",
-			value: 130,
-			colors1: "#FFE39C",
-			colors2: "#FFBA9C"
-		},
-		{
-			name: "Хорошо",
-			value: 65,
-			colors1: "#6FCF97",
-			colors2: "#66D2EA"
-		},
-		{
-			name: "Удовлетворительно",
-			value: 65,
-			colors1: "#BC9CFF",
-			colors2: "#8BA4F9"
-		},
-		{
-			name: "Разочарован",
-			value: 0,
-			colors1: "#909090",
-			colors2: "#3D4975"
-		},
-	],
-	desc: true,
-	conva: 2
-}
+const totalCount = (arr) => arr.reduce((count, acc) => (+acc.value + count), 0);
 
 document.addEventListener('click', (e) => {
 	if (e.target.closest(".reviews__btn")) {
@@ -674,7 +640,8 @@ if (document.querySelector('.calendar')) {
 }
 
 // Rate
-if (document.getElementById('MyCanvas')) {
+const myCanvas = document.querySelector('.impress')
+if (myCanvas) {
 	data = {
 		rates: [
 			{
@@ -706,4 +673,20 @@ if (document.getElementById('MyCanvas')) {
 		conva: 2
 	}
 	MyRateOnCanvas('MyCanvas', data)
+
+	let totalValue = totalCount(data.rates)
+	let tail = termOfNum(totalValue, ["гость", "гостя", "гостей"])
+	myCanvas.querySelector('.impress__label').innerHTML = `<span>${totalValue} ${tail}</span>`
+
+	let rateList = myCanvas.querySelector('.impress__list')
+	console.log(rateList);
+	rateList.innerHTML = data.rates.map((rate) => {
+		return `
+		<li class="impress__item">
+		<span class="impress__dott"
+			style="background: linear-gradient(180deg, ${rate.colors1} 0%, ${rate.colors2} 100%);"></span>
+		<span>${rate.name}</span>
+	</li>
+		`
+	}).join(' ')
 }

@@ -9,9 +9,10 @@ const MyRateOnCanvas = ($selector, data) => {
 }
 
 const draw = (ctx, data) => {
-	let totalValue = data.rates.reduce((count, acc) => (+acc.value + count), 0)
+	let totalValue = totalCount(data.rates)
 	let endAngle = -Math.PI / 2;
 	let canvas = { start: ctx.height / 2, end: ctx.height / 2, radiusIn: ctx.height / 2 - 4, radiusOut: ctx.height / 2 }
+
 	data.rates.forEach((rate) => {
 		if (rate.value) {
 			startAngle = endAngle;
@@ -49,41 +50,6 @@ const draw = (ctx, data) => {
 	ctx.arc(canvas.start, canvas.end, canvas.radiusIn, 0, 2 * Math.PI);
 	ctx.closePath();
 	ctx.fill();
-
-	// if (data.desc) {
-	// 	document.querySelector(`[for="${myCanvas.id}"]`).innerHTML = "<span>" + totalValue + "</span> голосов";
-	// }
 }
 
-const count = (arr) => arr.reduce((count, acc) => (+acc.value + count), 0);
-
-data = {
-	rates: [
-		{
-			name: "Великолепно",
-			value: 130,
-			colors1: "#FFE39C",
-			colors2: "#FFBA9C"
-		},
-		{
-			name: "Хорошо",
-			value: 65,
-			colors1: "#6FCF97",
-			colors2: "#66D2EA"
-		},
-		{
-			name: "Удовлетворительно",
-			value: 65,
-			colors1: "#BC9CFF",
-			colors2: "#8BA4F9"
-		},
-		{
-			name: "Разочарован",
-			value: 0,
-			colors1: "#909090",
-			colors2: "#3D4975"
-		},
-	],
-	desc: true,
-	conva: 2
-}
+const totalCount = (arr) => arr.reduce((count, acc) => (+acc.value + count), 0);

@@ -776,6 +776,65 @@ button:active {
   display: block;
 }
 
+.impress {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.impress__canvas {
+  position: relative;
+  height: 120px;
+  width: 120px;
+}
+
+.impress__label {
+  position: absolute;
+  z-index: 100;
+  inset: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.impress__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+}
+
+.impress__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+}
+
+.impress__item .impress__dott {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
 .reviews__item {
   display: -webkit-box;
   display: -ms-flexbox;
