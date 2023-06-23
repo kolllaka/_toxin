@@ -44,7 +44,7 @@ const draw = (ctx, data) => {
 		}
 	});
 
-	ctx.fillStyle = '#ffffff';
+	ctx.fillStyle = data.background;
 	ctx.beginPath();
 	ctx.moveTo(canvas.start, canvas.end);
 	ctx.arc(canvas.start, canvas.end, canvas.radiusIn, 0, 2 * Math.PI);
