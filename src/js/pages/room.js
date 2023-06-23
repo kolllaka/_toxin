@@ -86,13 +86,14 @@ if (myCanvas) {
 			},
 		],
 		desc: true,
-		conva: 2
+		conva: 2,
+		background: "#f6f6f6"
 	}
 	MyRateOnCanvas('MyCanvas', data)
 
 	let totalValue = totalCount(data.rates)
 	let tail = termOfNum(totalValue, ["гость", "гостя", "гостей"])
-	myCanvas.querySelector('.impress__label').innerHTML = `<span>${totalValue} ${tail}</span>`
+	myCanvas.querySelector('.impress__label').innerHTML = `<span>${totalValue}</span>${tail}`
 
 	let rateList = myCanvas.querySelector('.impress__list')
 	console.log(rateList);
