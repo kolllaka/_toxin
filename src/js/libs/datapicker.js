@@ -11,10 +11,17 @@ class Calendar {
 		this.year = time.getFullYear();
 		this.month = time.getMonth();
 		this.selectedValue = [];
+		if (data.selectedValue0) {
+			this.selectedValue[0] = data.selectedValue0
+		}
+		if (data.selectedValue1) {
+			this.selectedValue[1] = data.selectedValue1
+		}
 		this.daysArray;
 
 		this.#render();
 		this.#update();
+		this.#markingDay();
 
 		this.#setup();
 	}
@@ -31,7 +38,7 @@ class Calendar {
 		this.$el.querySelector('.gridbody__web').innerHTML = this.daysArray.map((el) => {
 			let day = new Date(el.value * 1000)
 			let selected = ""
-			if (el.value == this.selectedValue[0] && el.style == "gridbody__day") {
+			if (this.selectedValue[0] && el.value == this.selectedValue[0] && el.style == "gridbody__day") {
 				selected = "gridbody__day-select"
 			}
 

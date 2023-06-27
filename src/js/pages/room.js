@@ -50,6 +50,8 @@ if (document.getElementById('guests')) {
 // Calendar
 if (document.querySelector('.calendar')) {
 	const calendar = new Calendar('.calendar', {
+		selectedValue0: 1686171600,
+		selectedValue1: 1686344400,
 		placeholder: 'ДД.ММ.ГГГГ',
 		class: '.card__input'
 	})
