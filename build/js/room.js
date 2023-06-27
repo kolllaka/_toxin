@@ -642,7 +642,7 @@ if (document.getElementById('guests')) {
 if (document.querySelector('.calendar')) {
 	const calendar = new Calendar('.calendar', {
 		selectedValue0: 1686171600,
-		selectedValue1: 1686344400,
+		selectedValue1: 1686430800,
 		placeholder: 'ДД.ММ.ГГГГ',
 		class: '.card__input'
 	})
