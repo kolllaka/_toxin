@@ -936,10 +936,7 @@ button:active {
 .datapicker {
   position: absolute;
   top: 100%;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
+  left: 0;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1453,7 +1450,7 @@ button:active {
 
 .card__input {
   z-index: 10;
-  border: 1px solid rgba(31, 32, 65, 0.5);
+  border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px;
   padding: 13px 15px;
   width: 100%;
@@ -1469,7 +1466,12 @@ button:active {
           justify-content: start;
 }
 
+.card__input:hover {
+  border: 1px solid rgba(31, 32, 65, 0.5);
+}
+
 .card__input.show {
+  border: 1px solid rgba(31, 32, 65, 0.5);
   border-radius: 4px 4px 0 0;
   border-bottom: 1px solid transparent;
 }
@@ -1952,19 +1954,35 @@ button:active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 1px solid rgba(31, 32, 65, 0.25);
+  width: 100%;
+  position: relative;
   padding: 12px 0 12px 15px;
-  border-radius: 4px;
   gap: 15px;
+}
+
+.footerform:hover > .footerform__border {
+  border: 1px solid rgba(31, 32, 65, 0.5);
 }
 
 .footerform__input {
   width: 100%;
 }
 
+.footerform__input:focus ~ .footerform__border {
+  border: 1px solid rgba(31, 32, 65, 0.5);
+}
+
 .footerform__btn {
   cursor: pointer;
   height: 20px;
+}
+
+.footerform__border {
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  border-radius: 4px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
 }
 
 @media (max-width: 1339.98px) {

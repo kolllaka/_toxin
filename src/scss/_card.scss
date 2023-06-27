@@ -51,12 +51,16 @@
 	// .card__input
 	&__input {
 		z-index: 10;
-		border: 1px solid rgba($colorText, 0.5);
+		border: 1px solid rgba($colorText, 0.25);
 		border-radius: 4px;
 		padding: 13px 15px;
 		width: 100%;
 		background-color: $white;
+		&:hover{
+			border: 1px solid rgba($colorText, 0.5);
+		}
 		&.show{
+			border: 1px solid rgba($colorText, 0.5);
 			border-radius: 4px 4px 0 0;
 			border-bottom: 1px solid transparent;
 		}
