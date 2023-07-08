@@ -25,8 +25,19 @@
 // Body
 body {
 	font-family: $fontMain;
+	color: rgba($color: $colorText, $alpha: 0.5);
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
 	&.locked{
 		overflow: hidden;
+	}
+}
+
+a {
+	span{
+		color: rgba($color: $colorText, $alpha: 0.5);
 	}
 }
 

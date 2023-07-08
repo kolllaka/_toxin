@@ -31,7 +31,7 @@
 .maincontent {
 	// .maincontent__title
 	&__title {
-
+		color: rgba($color: $colorText, $alpha: 1);
 		font-size: 24px;
 		font-weight: 700;
 		line-height: 29px;
@@ -65,9 +65,11 @@
 
 	// .price__label
 	&__label {
-		color: rgba($colorText, 0.50);
+		color: rgba($colorText, 0.5);
 		font-size: 12px;
-		text-transform: uppercase;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
 	}
 
 	// .price__range

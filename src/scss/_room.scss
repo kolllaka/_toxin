@@ -65,6 +65,18 @@
 		margin-bottom: 20px;
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
+		span{
+			color: rgba($color: $colorText, $alpha: 1);
+			font-size: 19px;
+			font-weight: 700;
+			&:nth-child(2){
+				color: rgba(31, 32, 65, 0.50);
+				font-size: 14px;
+				font-weight: 400;
+				line-height: 14px;
+			}
+		}
 	}
 
 	// .cartroom__body
@@ -109,6 +121,12 @@
 		flex: 1 1 100%;
 		span{
 			display: block;
+			line-height: 24px;
+			color: rgba($color: $colorText, $alpha: .75);
+			&:first-child{
+				font-weight: 700;
+				color: rgba($color: $colorText, $alpha: 1);
+			}
 		}
 	}
 }
@@ -132,6 +150,15 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		flex-direction: column;
+
+		color: $pirple;
+		font-size: 12px;
+		font-weight: 700;
+		text-transform: uppercase;
+		span{
+			font-size: 24px;
+		}
 	}
 
 	// .impress__list
@@ -146,6 +173,10 @@
 		display: flex;
 		align-items: center;
 		gap: 5px;
+		span {
+			line-height: 24px;
+			color: rgba($color: $colorText, $alpha: .75);
+		}
 		& .impress__dott{
 			display: block;
 			width: 10px;
@@ -200,6 +231,12 @@
 	&__label {
 		span{
 			display: block;
+			line-height: 24px;
+			color: rgba($color: $colorText, $alpha: .75);
+			&:first-child{
+				font-weight: 700;
+				color: rgba($color: $colorText, $alpha: 1);
+			}
 		}
 	}
 
@@ -253,6 +290,10 @@
 
 	// .reviews__comment
 	&__comment {
+		p{
+			line-height: 24px;
+			color: rgba($color: $colorText, $alpha: .75);
+		}
 	}
 }
 
@@ -267,7 +308,10 @@
 
 	// .rules__text
 	&__text {
-
+		span{
+			line-height: 24px;
+			color: rgba($color: $colorText, $alpha: .75);
+		}
 	}
 
 	// .rules__marker
@@ -291,6 +335,10 @@
 }
 
 .cancel {
+	p{
+		line-height: 24px;
+		color: rgba($color: $colorText, $alpha: .75);
+	}
 }
 
 
@@ -309,6 +357,11 @@
 		grid-template-columns: 1fr 20px 80px;
 		gap: 4px;
 		align-items: baseline;
+
+		span{
+			line-height: 24px;
+			color: rgba($color: $colorText, $alpha: .75);
+		}
 	}
 
 	// .check__name
@@ -374,6 +427,7 @@
 		align-items: baseline;
 		font-size: 19px;
 		font-weight: 700;
+		color: rgba($color: $colorText, $alpha: .75);
 	}
 
 	// .check__totalname

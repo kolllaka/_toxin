@@ -141,10 +141,19 @@ h6 {
 
 body {
   font-family: "OpenSans", sans-serif;
+  color: rgba(31, 32, 65, 0.5);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 body.locked {
   overflow: hidden;
+}
+
+a span {
+  color: rgba(31, 32, 65, 0.5);
 }
 
 .wrapper {
@@ -727,6 +736,22 @@ button:active {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cartroom__title span {
+  color: #1f2041;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.cartroom__title span:nth-child(2) {
+  color: rgba(31, 32, 65, 0.5);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
 }
 
 .info__item {
@@ -774,6 +799,13 @@ button:active {
 
 .info__label span {
   display: block;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.info__label span:first-child {
+  font-weight: 700;
+  color: #1f2041;
 }
 
 .impress {
@@ -805,6 +837,18 @@ button:active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #bc9cff;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.impress__label span {
+  font-size: 24px;
 }
 
 .impress__list {
@@ -826,6 +870,11 @@ button:active {
       -ms-flex-align: center;
           align-items: center;
   gap: 5px;
+}
+
+.impress__item span {
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
 }
 
 .impress__item .impress__dott {
@@ -888,6 +937,13 @@ button:active {
 
 .reviews__label span {
   display: block;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.reviews__label span:first-child {
+  font-weight: 700;
+  color: #1f2041;
 }
 
 .reviews__btn {
@@ -958,6 +1014,11 @@ button:active {
   background: url("../img/icons/favorite.svg") center no-repeat;
 }
 
+.reviews__comment p {
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+}
+
 .rules__body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -967,6 +1028,11 @@ button:active {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 10px;
+}
+
+.rules__text span {
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
 }
 
 .rules__marker {
@@ -993,6 +1059,11 @@ button:active {
   opacity: 0;
 }
 
+.cancel p {
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+}
+
 .check__body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1012,6 +1083,11 @@ button:active {
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
+}
+
+.check__row span {
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
 }
 
 .check__name {
@@ -1087,6 +1163,7 @@ button:active {
           align-items: baseline;
   font-size: 19px;
   font-weight: 700;
+  color: rgba(31, 32, 65, 0.75);
 }
 
 .check__dashed {
@@ -1112,6 +1189,7 @@ button:active {
   border: 1px solid rgba(31, 32, 65, 0.5);
   border-radius: 0 0 4px 4px;
   display: none;
+  color: #1f2041;
 }
 
 .datapicker.show {
@@ -1368,6 +1446,12 @@ button:active {
   margin-bottom: 21px;
 }
 
+.card__title span {
+  color: #1f2041;
+  font-size: 24px;
+  font-weight: 700;
+}
+
 .card__body {
   margin-bottom: 30px;
 }
@@ -1417,8 +1501,11 @@ button:active {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  text-transform: uppercase;
   margin-bottom: 7px;
+  color: #1f2041;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .card__input {
@@ -1871,13 +1958,24 @@ button:active {
   margin-bottom: 20px;
 }
 
+.footer__text {
+  color: rgba(31, 32, 65, 0.75);
+  line-height: 24px;
+}
+
 .footer__nav li:not(:last-child) {
   margin-bottom: 20px;
 }
 
 .footer__linktitle {
-  text-transform: uppercase;
   margin-bottom: 21px;
+}
+
+.footer__linktitle span {
+  color: #1f2041;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .footer__bottom {

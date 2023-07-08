@@ -26,6 +26,8 @@
 
 	// .footer__text
 	&__text {
+		color: rgba($color: $colorText, $alpha: 0.75);
+		line-height: 24px;
 	}
 
 	// .footer__nav
@@ -39,13 +41,20 @@
 
 	// .footer__linktitle
 	&__linktitle {
-		text-transform: uppercase;
 		margin-bottom: 21px;
+		span{
+			color: rgba($color: $colorText, $alpha: 1);
+			font-size: 12px;
+			font-weight: 700;
+			text-transform: uppercase;
+		}
 	}
 
 	// .footer__link
 	&__link {
+		span {
 
+		}
 	}
 
 	// .footer__form
