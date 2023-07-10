@@ -1021,7 +1021,7 @@ button:active {
   margin-bottom: 21px;
 }
 
-.card__title span {
+.card__title > span {
   color: #1f2041;
   font-size: 24px;
   font-weight: 700;
