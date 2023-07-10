@@ -11,8 +11,13 @@ class Calendar {
 		this.year = time.getFullYear();
 		this.month = time.getMonth();
 		this.selectedValue = [];
+
+
 		if (data.selectedValue0) {
 			this.selectedValue[0] = data.selectedValue0
+			let time = new Date(this.selectedValue[0] * 1000)
+			this.year = time.getFullYear()
+			this.month = time.getMonth()
 		}
 		if (data.selectedValue1) {
 			this.selectedValue[1] = data.selectedValue1
