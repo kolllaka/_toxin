@@ -8,7 +8,6 @@
 
 	// .page__body
 	&__body {
-		margin-top: 70px;
 		padding-top: 70px;
 		padding-bottom: 70px;
 		display: grid;
@@ -27,13 +26,34 @@
 }
 
 .hero {
-
+	display: flex;
+	margin-top: 70px;
+	width: 100%;
+	height: 485px;
 	// .hero__column
 	&__column {
+		&:first-child {
+			flex: 1 1 68.1%;
+		}
+		&:last-child {
+			flex: 1 1 31.9%;
+			height: 50%;
+		}
 	}
 
-	// .hero__row
-	&__row {
+	// .hero__img
+	&__img{
+		height: 100%;
+		width: 100%;
+		position: relative;
+		img {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			object-fit: cover;
+		}
 	}
 }
 

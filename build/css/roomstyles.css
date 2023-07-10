@@ -695,12 +695,49 @@ button:active {
 }
 
 .page__body {
-  margin-top: 70px;
   padding-top: 70px;
   padding-bottom: 70px;
   display: grid;
   grid-template-columns: auto 33%;
   gap: 70px;
+}
+
+.hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 70px;
+  width: 100%;
+  height: 485px;
+}
+
+.hero__column:first-child {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 68.1%;
+          flex: 1 1 68.1%;
+}
+
+.hero__column:last-child {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 31.9%;
+          flex: 1 1 31.9%;
+  height: 50%;
+}
+
+.hero__img {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.hero__img img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .pagecontent {
