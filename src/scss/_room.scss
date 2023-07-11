@@ -377,9 +377,8 @@
 		gap: 4px;
 		align-items: baseline;
 
-		span{
+		&>span{
 			line-height: 24px;
-			color: rgba($color: $colorText, $alpha: .75);
 		}
 	}
 

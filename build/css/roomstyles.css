@@ -1122,9 +1122,8 @@ button:active {
           align-items: baseline;
 }
 
-.check__row span {
+.check__row > span {
   line-height: 24px;
-  color: rgba(31, 32, 65, 0.75);
 }
 
 .check__name {
