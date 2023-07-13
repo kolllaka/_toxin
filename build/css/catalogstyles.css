@@ -2131,6 +2131,9 @@ button:active {
   }
 
   .burger__btn.active-burger span {
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
     -webkit-transform: scale(0);
         -ms-transform: scale(0);
             transform: scale(0);
